@@ -57,6 +57,13 @@ Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
 +   tanpa overlap) agar 22 brief tetap muat di kotak 174px.
 +   Perhitungan awal agen sebelumnya (y1=766) SALAH: brief butuh
 +   tinggi >=186px di pitch 15 dan pin Wellington butuh peta >=~176px.
++13. Revisi Kevin 22 Nov 05:06 WIB: DATE CHECK gaya v20 di 12pt
++   (opsi A — "kayak v20" MENANG atas lantai 16pt untuk kotak ini;
++   v20 sendiri pakai 12pt): chip merah "DATE CHECK" di kiri +
++   kolom kanan berisi daftar (2 baris) + brief ringkasan (1 baris),
++   teks tebal navy 12pt. Kotak + Sources TIDAK digeser (tinta 3 baris
++   terukur 36px, muat di kotak 50px). Isi daftar + brief tidak
++   menambah fakta baru.
 
 YANG TIDAK BERUBAH: kerangka masthead + deck + strip + 3 hero + 10 kartu
 + peta + brief + DATE CHECK; kemurnian tanggal 35/35 Sabtu + angka
@@ -340,13 +347,17 @@ DECK = ("COP31 in overtime  \u00b7  Three missiles down over Riyadh  \u00b7  "
         "Peru quake 6.7  \u00b7  Kryvyi Rih double strike  \u00b7  "
         "Davao: all 146 safe")
 
-DATECHECK = ("Left out as Friday 20 Nov news: Kyiv bridges hit \u00b7 "
-             "missile in Poland \u00b7 Wall Street correction \u00b7 UK\u2013EU "
-             "deal \u00b7 Akvan landfall \u00b7 ICJ Myanmar ruling \u00b7 "
-             "Iran uranium \u00b7 Taiwan warning \u00b7 Shenzhen summit \u00b7 "
-             "Anthropic IPO \u00b7 GTA VI launch. "
-             "Not yet happened: BepiColombo (19:24 CET) \u00b7 ATP semis "
-             "\u00b7 T20 opener.")
+DATECHECK_LIST = ("Left out as Friday 20 Nov news: Kyiv bridges hit \u00b7 "
+                  "missile in Poland \u00b7 Wall Street correction \u00b7 UK\u2013EU "
+                  "deal \u00b7 Akvan landfall \u00b7 ICJ Myanmar ruling \u00b7 "
+                  "Iran uranium \u00b7 Taiwan warning \u00b7 Shenzhen summit \u00b7 "
+                  "Anthropic IPO \u00b7 GTA VI launch. "
+                  "Not yet happened: BepiColombo (19:24 CET) \u00b7 ATP semis "
+                  "\u00b7 T20 opener.")
+
+DC_BRIEF = ("Every story here happened, or was first reported, on "
+            "Saturday 21 Nov 2026. Friday\u2019s news was left out; "
+            "tonight\u2019s events have not happened yet.")
 
 SOURCES = ("Sources: Reuters \u00b7 AP \u00b7 AFP \u00b7 BBC \u00b7 USGS \u00b7 "
            "NASA \u00b7 Antara \u00b7 Yonhap \u00b7 ATP Tour \u00b7 ESA \u00b7 "
@@ -1233,23 +1244,48 @@ def draw_briefs(d):
 
 
 def draw_footer(d):
-    """DATE CHECK MENONJOL (band kontras + bingkai merah, 2 baris) +
-    garis Sources kecil. TANPA catatan produksi/draf."""
+    """DATE CHECK GAYA v20 (Keputusan Kevin 22 Nov 05:06 WIB, opsi A):
+    chip merah "DATE CHECK" di kiri + kolom kanan berisi daftar
+    (2 baris) + brief ringkasan (1 baris), teks tebal navy 12pt.
+    "Kayak v20" MENANG atas lantai 16pt untuk kotak ini (v20 sendiri
+    pakai 12pt). Kotak + Sources TIDAK digeser: tinta 3 baris terukur
+    36px, muat di kotak 50px. TANPA catatan produksi/draf."""
     x1, y1, x2, y2 = DC_BOX
     reg_layout(DC_BOX, "datecheck")
     tt = TileText("footer")
     d.rectangle([x1, y1, x2, y2], outline=RED, width=2)
     d.rectangle([x1 + 2, y1 + 2, x2 - 2, y2 - 2], fill=(250, 235, 230))
-    tt.text(d, x1 + 10, y1 + 3, "DATE CHECK", F(SS800, 11), RED)
-    lines = wrap(d, DATECHECK, F(SS400, 10), x2 - x1 - 20)
-    assert len(lines) == 2, f"DATE CHECK {len(lines)} baris: {lines}"
-    yy = y1 + 17
+    # --- chip merah "DATE CHECK" (ala v20: teks 10pt, chip 22px) ---
+    f_chip = F(SS800, 10)
+    chip_w = int(d.textlength("DATE CHECK", font=f_chip)) + 16
+    chip_h = 22
+    cx0 = x1 + 8
+    cy0 = y1 + (y2 - y1 - chip_h) // 2
+    d.rectangle([cx0, cy0, cx0 + chip_w, cy0 + chip_h], fill=RED)
+    tt.text(d, (cx0 + cx0 + chip_w) // 2, (cy0 + cy0 + chip_h) // 2,
+            "DATE CHECK", f_chip, WHITE, anchor="mm")
+    # --- kolom kanan: daftar (2 baris) + brief (1 baris), navy tebal 12pt ---
+    tx0 = cx0 + chip_w + 12
+    max_w = x2 - 8 - tx0
+    f_t = F(SS800, 12)
+    list_lines = wrap(d, DATECHECK_LIST, f_t, max_w)
+    brief_lines = wrap(d, DC_BRIEF, f_t, max_w)
+    assert len(list_lines) == 2, (
+        f"DATE CHECK daftar {len(list_lines)} baris: {list_lines}")
+    assert len(brief_lines) == 1, (
+        f"DATE CHECK brief {len(brief_lines)} baris: {brief_lines}")
+    lines = list_lines + brief_lines
+    lh = 12
+    bb = d.textbbox((tx0, 0), lines[0], font=f_t, anchor="la")
+    ink_top, ink_h = bb[1], bb[3] - bb[1]
+    ink_span = (len(lines) - 1) * lh + ink_h
+    y = y1 + (y2 - y1 - ink_span) // 2 - ink_top
     for ln in lines:
-        tt.text(d, x1 + 10, yy, ln, F(SS400, 10), INK)
-        yy += 13
-    assert yy <= y2 - 2, "DATE CHECK meluber"
+        tt.text(d, tx0, y, ln, f_t, NAVY)
+        y += lh
+    assert y - lh + ink_top + ink_h <= y2 - 2, "DATE CHECK meluber"
     tt.text(d, 28, SRC_Y, SOURCES, F(SS400, 9), GREY)
-    return {"dc_lines": len(lines)}
+    return {"dc_lines": len(lines), "dc_pt": 12}
 
 
 def measure(img):
