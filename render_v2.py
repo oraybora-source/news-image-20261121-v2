@@ -40,6 +40,23 @@ Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
    8pt->13pt, jarak minimum 18->25px, offset sampai 30px; acuan pin
    ni20 rev8) + label peta (judul 11->14, "Pins 1-13" 12->14, legenda
    8->11, chip 16px->20px); posisi kota + warna pin TIDAK berubah.
+11. Revisi Kevin 22 Nov 04:46 WIB: perbesar teks ringkasan/deskripsi di
+   bawah headline semua 13 kartu supaya kelihatan tanpa zoom —
+   LANTAI 16px (aturan Kevin 22 Nov 04:47, MEMORY.md: tidak ada teks di
+   bawah 16px di file; kalau tidak muat, potong kata, JANGAN kecilkan
+   font; cek di lebar 390px). Hero 11->16pt, kartu 10->16pt, pitch
+   19; HERO_H 216->222 (ringkasan mulai +76); 7 ringkasan dipersingkat
+   supaya tetap <=2 baris (#5, #7, #8, #10, #11, #12, #13 — "both
+   tonight" #13 sudah di banner SEMIS TONIGHT); fakta/angka TIDAK
+   berubah; headline tetap.
++12. Opsi A Kevin 22 Nov 04:55 WIB (layout agar ringkasan 16pt muat):
++   CARD_H 156->170, CARD_Y baris-2 578->588, MAP_BOX/BRIEFS_BOX y1
++   742->762 (peta 194->174px, -10%); pitch ringkasan kartu 19->18
++   (bbox teks 16pt = 16px, celah 2px antar baris, tanpa overlap);
++   briefs pitch 15->14 + mulai y1+23 (chip 14px bersentuhan vertikal,
++   tanpa overlap) agar 22 brief tetap muat di kotak 174px.
++   Perhitungan awal agen sebelumnya (y1=766) SALAH: brief butuh
++   tinggi >=186px di pitch 15 dan pin Wellington butuh peta >=~176px.
 
 YANG TIDAK BERUBAH: kerangka masthead + deck + strip + 3 hero + 10 kartu
 + peta + brief + DATE CHECK; kemurnian tanggal 35/35 Sabtu + angka
@@ -210,7 +227,7 @@ CARDS = [
     {"num": 5, "city": "Davao", "place": "DAVAO, PHILIPPINES",
      "topic": "AIR SAFETY", "region": "ASIA",
      "title": "Air Niugini jet lands in Davao",
-     "sum": "Engine fire warning; all safe after slide evacuation.",
+     "sum": "Engine fire warning; all safe.",
      "painter": "davao", "map_city": "Davao",
      "banner": "ALL 146 SAFE", "source": "AP"},
     {"num": 6, "city": "Darmstadt", "place": "DARMSTADT, GERMANY",
@@ -222,13 +239,13 @@ CARDS = [
     {"num": 7, "city": "Washington", "place": "WASHINGTON, USA",
      "topic": "TAX", "region": "AMERICAS",
      "title": "Trump vows tax on data centres",
-     "sum": "US firms taxed if they build data centres abroad.",
+     "sum": "US firms taxed if they build abroad.",
      "painter": "capitol", "map_city": "Washington",
      "banner": "TREMENDOUS TAX", "source": "Reuters"},
     {"num": 8, "city": "New York", "place": "GLOBAL MARKETS",
      "topic": "MARKETS", "region": "GLOBAL",
      "title": "Bitcoin slides early Saturday",
-     "sum": "Down 3.6%; lowest since Sep 2024; $1.5bn liquidated.",
+     "sum": "Down 3.6%; $1.5bn liquidated.",
      "painter": "bitcoin", "map_city": "New York",
      "banner": "BITCOIN $56,814", "source": "Reuters"},
     {"num": 9, "city": "Wellington", "place": "WELLINGTON, NZ",
@@ -240,25 +257,25 @@ CARDS = [
     {"num": 10, "city": "Las Vegas", "place": "LAS VEGAS, USA",
      "topic": "FORMULA 1", "region": "AMERICAS",
      "title": "Las Vegas GP qualifying",
-     "sum": "Antonelli fastest; Verstappen on pole after penalty.",
+     "sum": "Antonelli fastest; Verstappen on pole.",
      "painter": "f1", "map_city": "Las Vegas",
      "banner": "ON POLE", "source": "Reuters · Sky"},
     {"num": 11, "city": "Hormuz", "place": "STRAIT OF HORMUZ",
      "topic": "DRONE", "region": "MIDDLE EAST",
      "title": "Iran says it downed MQ-9",
-     "sum": "Tehran claims 58th downing; not independently verified.",
+     "sum": "58th downing claimed; unverified.",
      "painter": "drone", "map_city": "Hormuz",
      "banner": "MQ-9 DOWN", "source": "Press TV"},
     {"num": 12, "city": "California", "place": "OFF CALIFORNIA, USA",
      "topic": "SPACE", "region": "AMERICAS",
      "title": "SpaceX Dragon splashdown",
-     "sum": "Cargo Dragon undocks from ISS; splashdown 16:55 EST.",
+     "sum": "Undocks from ISS; splashdown 16:55 EST.",
      "painter": "dragon", "map_city": "California Coast",
      "banner": "SPLASHDOWN", "source": "NASA"},
     {"num": 13, "city": "Turin", "place": "TURIN, ITALY",
      "topic": "TENNIS", "region": "EUROPE",
      "title": "ATP Finals semis in Turin",
-     "sum": "Alcaraz–Shelton, Zverev–Medvedev; both tonight.",
+     "sum": "Alcaraz–Shelton, Zverev–Medvedev.",
      "painter": "tennis", "map_city": "Turin",
      "banner": "SEMIS TONIGHT", "source": "ATP Tour"},
 ]
@@ -836,19 +853,19 @@ def assign_banners(panels, regions):
 TITLE_Y = 16
 STRIP_Y, STRIP_H = 108, 48
 REGION_Y, REGION_H = 160, 24
-HERO_Y, HERO_H = 190, 216
+HERO_Y, HERO_H = 190, 222
 HERO_IMG_H = 100          # banner 30 + ilustrasi 70
 HERO_BANNER_H = 30
 HERO_X = [28, 354, 680]
 HERO_W = 316
-CARD_Y = [414, 578]
-CARD_H = 156
+CARD_Y = [414, 588]
+CARD_H = 170
 CARD_IMG_H = 76           # banner 28 + ilustrasi 48
 CARD_BANNER_H = 28
 CARD_X = [28, 223, 418, 613, 808]
 CARD_W = 186
-MAP_BOX = (28, 742, 408, 936)
-BRIEFS_BOX = (420, 742, 996, 936)
+MAP_BOX = (28, 762, 408, 936)
+BRIEFS_BOX = (420, 762, 996, 936)
 DC_BOX = (28, 942, 996, 992)
 SRC_Y = 998
 MAP_HEADER_H = 22
@@ -990,7 +1007,7 @@ def make_panel_img(painter_img, banner_color, banner_text, source,
 
 def draw_hero(im, d, hero, x, y, panel_img):
     """Hero: gambar atas 100px (banner 30 + ilustrasi 70) + kicker 9pt +
-    judul Gelasio 26px (<=2 baris) + ringkasan 11pt (2 baris)."""
+    judul Gelasio 26px (<=2 baris) + ringkasan 16pt (2 baris)."""
     tt = TileText(f"hero{hero['num']}")
     im.paste(panel_img, (x + 1, y + 1))
     reg_layout((x, y, x + HERO_W, y + HERO_H), f"hero{hero['num']}")
@@ -1008,19 +1025,19 @@ def draw_hero(im, d, hero, x, y, panel_img):
     for ln in tlines:
         tt.text(d, tx0, yy, ln, F(GEL700, 26), INK)
         yy += 29
-    slines = wrap(d, hero["sum"], F(SS400, 11), tx1 - tx0)
+    slines = wrap(d, hero["sum"], F(SS400, 16), tx1 - tx0)
     assert len(slines) == 2, f"ringkasan hero {hero['num']}: {slines}"
-    yy = y + HERO_IMG_H + 80
+    yy = y + HERO_IMG_H + 76
     for ln in slines:
-        tt.text(d, tx0, yy, ln, F(SS400, 11), (60, 58, 50))
-        yy += 14
+        tt.text(d, tx0, yy, ln, F(SS400, 16), (60, 58, 50))
+        yy += 19
     assert yy <= y + HERO_H - 6, f"hero {hero['num']} meluber"
     return {"title_lines": len(tlines), "sum_lines": len(slines)}
 
 
 def draw_card(im, d, card, x, y, panel_img):
     """Kartu: gambar atas 76px (banner 28 + ilustrasi 48) + kicker 8pt +
-    judul Gelasio 18px (<=2 baris) + ringkasan 10pt (<=2 baris)."""
+    judul Gelasio 18px (<=2 baris) + ringkasan 16pt (<=2 baris)."""
     tt = TileText(f"card{card['num']}")
     im.paste(panel_img, (x + 1, y + 1))
     reg_layout((x, y, x + CARD_W, y + CARD_H), f"card{card['num']}")
@@ -1040,12 +1057,12 @@ def draw_card(im, d, card, x, y, panel_img):
     for ln in tlines:
         tt.text(d, tx0, yy, ln, F(GEL700, 18), INK)
         yy += 20
-    slines = wrap(d, card["sum"], F(SS400, 10), tx1 - tx0)
+    slines = wrap(d, card["sum"], F(SS400, 16), tx1 - tx0)
     assert 1 <= len(slines) <= 2, f"ringkasan kartu {card['num']}: {slines}"
     yy = y + CARD_IMG_H + 54
     for ln in slines:
-        tt.text(d, tx0, yy, ln, F(SS400, 10), (60, 58, 50))
-        yy += 11
+        tt.text(d, tx0, yy, ln, F(SS400, 16), (60, 58, 50))
+        yy += 18
     assert yy <= y + CARD_H - 2, f"kartu {card['num']} meluber ke bawah"
     return {"title_lines": len(tlines), "sum_lines": len(slines)}
 
@@ -1173,13 +1190,13 @@ def draw_briefs(d):
     f_src = F(SS400, 10)
     f_chip = F(SS800, 10)
     chip_h = 14
-    pitch = 15
+    pitch = 14
     per = [11, 11]
     idx = 0
     col_bottoms = []
     for c in range(2):
         cx = x1 + 8 + c * (cw + 12)
-        yy = y1 + 26
+        yy = y1 + 23
         for k in range(per[c]):
             n, city, t, src, region = BRIEFS[idx]
             idx += 1
