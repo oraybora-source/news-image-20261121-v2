@@ -7,14 +7,14 @@ Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
    di bawah gambar). Warna banner tetangga ortogonal selalu beda >= 25
    (aturan Kevin: warna atas panel beda dari tetangga).
 2. Bar region tersegmentasi di bawah strip angka (7 segmen sama lebar,
-   hitungan dari 36 cerita kami: EUROPE 5, MIDDLE EAST 4, AFRICA 1,
-   ASIA 13, AMERICAS 6, OCEANIA 4, WORLD 3).
+   hitungan dari 35 cerita kami: EUROPE 5, MIDDLE EAST 4, AFRICA 1,
+   ASIA 12, AMERICAS 6, OCEANIA 4, WORLD 3).
 3. Brief MORE STORIES -> 2 kolom: chip nomor warna region + kota merah
    tebal + brief 1 baris (fakta/angka kunci) + (Sumber).
 4. Reselection feature-13: kartu Bitcoin ($56.814, -3,6%) + Dragon
    splashdown MASUK; Vietnam law + freight derail pindah ke brief;
    Rahul -> 136 / 344-2. TIDAK ada kartu Jumat (uranium/China-Jepang)
-   — keputusan itu masih terbuka untuk Kevin; kemurnian Sabtu 36/36.
+   — keputusan itu masih terbuka untuk Kevin; kemurnian Sabtu 35/35.
 5. Legibility pass 390px: hero headline 26px, kartu 18px, banner 20px;
    peta lebih terang + pin warna per region.
 6. REVERT (Keputusan Kevin 22 Nov 04:24 WIB — MEMBATALKAN keputusan
@@ -27,9 +27,12 @@ Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
    OCEANIA 4; TIDAK ada lagi label tanggal hari sebelumnya di kartu.
    Dipertahankan dari FIX manual: Delhi AQI 279 (CPCB 07:00, B3 —
    angka 286 tidak terverifikasi).
+7. Revisi Kevin 22 Nov 04:38 WIB: hapus brief #25 Bangkok ("Anutin
+   calls emergency meeting") supaya kolom MORE STORIES rata 11/11;
+   brief 26-36 jadi 25-35; total 35/35 Sabtu; ASIA 12.
 
 YANG TIDAK BERUBAH: kerangka masthead + deck + strip + 3 hero + 10 kartu
-+ peta + brief + DATE CHECK; kemurnian tanggal 36/36 Sabtu + angka
++ peta + brief + DATE CHECK; kemurnian tanggal 35/35 Sabtu + angka
 terverifikasi (3 / $56.814 / 2-42 / BepiColombo "tonight"); lead trio
 COP31 / Riyadh / Peru; DATE CHECK jujur + menonjol; teknis <=1 MiB,
 1024x1024, deterministik 2x, tanpa network; satu gaya ilustrasi datar;
@@ -160,7 +163,7 @@ def contrast_white(bg):
 
 
 # ------------------------------------------------------------------ data
-# 36 cerita Sabtu 21 Nov 2026, terverifikasi sumber primer (STORIES.md).
+# 35 cerita Sabtu 21 Nov 2026, terverifikasi sumber primer (STORIES.md).
 # CH4: Bitcoin (17->8) + Dragon (18->12) jadi kartu; Vietnam law (12->17)
 # + freight derail (8->18) jadi brief; Rahul 136 / 344-2.
 HEROES = [
@@ -250,8 +253,9 @@ CARDS = [
      "banner": "SEMIS TONIGHT", "source": "ATP Tour"},
 ]
 
-# Briefs 14-36: (nomor, kota, teks 1 baris + fakta/angka kunci, sumber,
-# region). 2 kolom, 12/11 per kolom.
+# Briefs 14-35: (nomor, kota, teks 1 baris + fakta/angka kunci, sumber,
+# region). 2 kolom, 11/11 per kolom (brief #25 Bangkok dihapus 22 Nov
+# atas permintaan Kevin supaya bawah kolom rata).
 BRIEFS = [
     (14, "WARSAW", "Rutte flies to Warsaw today", "AP", "EUROPE"),
     (15, "IRAQ", "Road to Karbala reopens", "ANF", "MIDDLE EAST"),
@@ -264,30 +268,29 @@ BRIEFS = [
     (22, "LISBON", "CGTP marches today", "downriver", "EUROPE"),
     (23, "MANILA", "Pet cremation scam: 170 dumped", "BBC", "ASIA"),
     (24, "JAKARTA", "PLN signs clean-power deals", "Antara", "ASIA"),
-    (25, "BANGKOK", "Anutin calls emergency meeting", "Nation", "ASIA"),
-    (26, "NEW DELHI", "Pakistani minister speaks", "The News", "ASIA"),
-    (27, "E. INDIA", "Akvan rain soaks east India", "Jagran", "ASIA"),
-    (28, "AUSTRALIA", "Cummins keeps the captaincy", "AAP", "OCEANIA"),
-    (29, "ITALY", "Rail strike halts trains today", "Treniamo", "EUROPE"),
-    (30, "NAGA", "Naga votes on city status", "PNA", "ASIA"),
-    (31, "JAVA", "M4.6 quake off Java", "BMKG", "ASIA"),
-    (32, "CHILE", "M4.7 quake in northern Chile", "USGS", "AMERICAS"),
-    (33, "DELHI", "Delhi chokes: AQI 279", "CPCB", "ASIA"),
-    (34, "VISAYAS", "Grid on yellow alert", "NGCP", "ASIA"),
-    (35, "TASMANIA", "One Nation donors revealed", "ABC", "OCEANIA"),
-    (36, "MELBOURNE", "T20 opener tonight", "cricket.com.au", "OCEANIA"),
+    (25, "NEW DELHI", "Pakistani minister speaks", "The News", "ASIA"),
+    (26, "E. INDIA", "Akvan rain soaks east India", "Jagran", "ASIA"),
+    (27, "AUSTRALIA", "Cummins keeps the captaincy", "AAP", "OCEANIA"),
+    (28, "ITALY", "Rail strike halts trains today", "Treniamo", "EUROPE"),
+    (29, "NAGA", "Naga votes on city status", "PNA", "ASIA"),
+    (30, "JAVA", "M4.6 quake off Java", "BMKG", "ASIA"),
+    (31, "CHILE", "M4.7 quake in northern Chile", "USGS", "AMERICAS"),
+    (32, "DELHI", "Delhi chokes: AQI 279", "CPCB", "ASIA"),
+    (33, "VISAYAS", "Grid on yellow alert", "NGCP", "ASIA"),
+    (34, "TASMANIA", "One Nation donors revealed", "ABC", "OCEANIA"),
+    (35, "MELBOURNE", "T20 opener tonight", "cricket.com.au", "OCEANIA"),
 ]
 
 NUMBERS = [("13", "DAY 13 \u00b7 COP31"), ("3", "MISSILES DOWNED"),
            ("6.7", "PERU QUAKE"), ("146", "SAFE IN DAVAO"),
            ("42", "HURT IN KRYVYI RIH"), ("$56,814", "BITCOIN SAT AM")]
 
-# Bar region: hitungan dari 36 cerita KAMI (bukan angka rank 2 yang
+# Bar region: hitungan dari 35 cerita KAMI (bukan angka rank 2 yang
 # dikutip loss report — angka itu total 32 = cerita rank 2).
-# Asia 13, Americas 6, Europe 5, Middle East 4, Oceania 4, Global 3,
+# Asia 12, Americas 6, Europe 5, Middle East 4, Oceania 4, Global 3,
 # Africa 1 — lihat stories-21nov.md.
 REGION_BAR = [("EUROPE", 5), ("MIDDLE EAST", 4), ("AFRICA", 1),
-              ("ASIA", 13), ("AMERICAS", 6), ("OCEANIA", 4),
+              ("ASIA", 12), ("AMERICAS", 6), ("OCEANIA", 4),
               ("WORLD", 3)]
 
 # Warna region: dipakai banner + segmen bar region + pin peta (satu
@@ -1139,7 +1142,7 @@ def draw_map(im, d):
 
 def draw_briefs(d):
     """CH3: MORE STORIES 2 kolom — chip nomor warna region + kota merah
-    tebal + brief 1 baris (fakta/angka kunci) + (Sumber). 12/11 per kolom.
+    tebal + brief 1 baris (fakta/angka kunci) + (Sumber). 11/11 per kolom.
     """
     x1, y1, x2, y2 = BRIEFS_BOX
     reg_layout(BRIEFS_BOX, "briefs")
@@ -1147,14 +1150,14 @@ def draw_briefs(d):
     d.rectangle([x1, y1, x2, y2], outline=NAVY, width=1)
     d.rectangle([x1 + 1, y1 + 1, x2 - 1, y2 - 1], fill=NEAR_WHITE)
     tt.text(d, x1 + 8, y1 + 4, "MORE STORIES", F(SS800, 13), INK)
-    tt.text(d, x2 - 8, y1 + 4, "14\u201336", F(SS800, 11), RED, anchor="ra")
+    tt.text(d, x2 - 8, y1 + 4, "14\u201335", F(SS800, 11), RED, anchor="ra")
     d.line([(x1 + 8, y1 + 21), (x2 - 8, y1 + 21)], fill=RED, width=2)
     cw = (x2 - x1 - 16 - 12) // 2
     f_city = F(SS800, 10)
     f_txt = F(SS400, 10)
     f_src = F(SS400, 9)
     f_chip = F(SS800, 9)
-    per = [12, 11]
+    per = [11, 11]
     idx = 0
     col_bottoms = []
     for c in range(2):
@@ -1188,7 +1191,7 @@ def draw_briefs(d):
             tt.add((cx, yy, cx + total, yy + 13), f"brief{n}")
             yy += 13
         col_bottoms.append(yy - 13)
-    assert idx == 23, f"briefs terpasang {idx}, harus 23"
+    assert idx == 22, f"briefs terpasang {idx}, harus 22"
     assert max(col_bottoms) - min(col_bottoms) <= 20, (
         f"kolom brief tidak rata: {col_bottoms}")
     assert max(col_bottoms) <= y2 - 8, "briefs meluber ke bawah"

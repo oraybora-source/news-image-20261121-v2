@@ -1,4 +1,4 @@
-# news-image-20261121 (ni21) — 36 Cerita Sabtu 21 November 2026
+# news-image-20261121 (ni21) — 35 Cerita Sabtu 21 November 2026
 
 - Bounty: `news-image-20261121` — "Sum up 21 November's world news in one image". $100, top 50 (1: $20, 2: $12, 3: $6, 4–10: $2, 11–50: $1,20). Fee $0.
 - Buka Sab 21 Nov 07:00 WIB, deadline Sen 23 Nov 07:00 WIB. Final due 7 Des 2026.
@@ -6,7 +6,7 @@
 - Juri AI pairwise, TIDAK punya news feed — menilai seperti editor foto teliti, dari apa yang gambar itu sendiri tunjukkan.
 - Aturan tanggal (KERAS): cerita harus terjadi ATAU pertama kali dilaporkan pada Sab 21 Nov 2026 di SETIDAKNYA SATU zona waktu. Yang pertama dilaporkan Jum 20 Nov atau lebih lama di SEMUA zona waktu = DITOLAK.
 - Riset: 21 Nov 2026 ~12:07–13:45 WIB. Model: Muse Spark. Semua cerita di bawah terverifikasi dari sumber primer bertanggal (Reuters, AP, AFP, BBC, dll.) — bukan cuma headline agregator.
-- Hitungan region (36 cerita): Asia 13 · Americas 6 · Europe 5 · Middle East 4 · Oceania 4 · Global 3 · Africa 1.
+- Hitungan region (35 cerita): Asia 12 · Americas 6 · Europe 5 · Middle East 4 · Oceania 4 · Global 3 · Africa 1.
 
 ## LEAD (1–3)
 
@@ -90,7 +90,7 @@
 **Sumber + tanggal:** ATP Tour (jadwal + preview, 20 Nov 2026), Xinhua (via nampa.org) 21 Nov 2026.
 **Bukti tanggal:** Jadwal Sabtu; bingkai "due tonight" — pertandingan BELUM dimainkan.
 
-## BRIEFS (14–36)
+## BRIEFS (14–35)
 
 ### 14. Rutte Warsaw visit today — Polandia (Europe)
 **Judul:** Rutte flies to Warsaw as Poland seeks more NATO support
@@ -158,73 +158,67 @@
 **Sumber + tanggal:** Antara (English), "Jakarta, Nov. 21 — statement received here on Saturday".
 **Bukti tanggal:** Pernyataan PLN diterima Antara Sabtu; artikel bertanggal 21 Nov.
 
-### 25. Bangkok arsenic emergency meeting — Thailand (Asia)
-**Judul:** Anutin calls emergency meeting on toxic rivers
-**Ringkasan:** PM Anutin Charnvirakul memimpin rapat darurat tingkat kabinet di Government House Sabtu untuk menaikkan kontaminasi logam berat di sungai Chiang Rai menjadi prioritas nasional, setelah mendapat janji dukungan teknis monitoring/pembersihan dari Presiden Xi Jinping di Shenzhen 20 Nov. Arsenik 30× batas aman di sungai Sai dan Kok, air keran dihentikan untuk 20.000+ rumah tangga; rencana enam poin.
-**Sumber + tanggal:** Chiang Rai Times (21 Nov), The Nation (Instagram, diposting 21 Nov).
-**Bukti tanggal:** Rapat darurat Sabtu; janji Xi Jumat 20 Nov. (Rencana enam poin itu sendiri diumumkan 16 Nov — hook Sabtu adalah rapat darurat + janji Xi.)
-
-### 26. SCO forum Saturday sessions — India (Asia)
+### 25. SCO forum Saturday sessions — India (Asia)
 **Judul:** Pakistani minister addresses SCO forum in Delhi
 **Ringkasan:** Forum Dialog Peradaban SCO, New Delhi (20–22 Nov); sesi tematik 21–22 Nov; Menteri Iklim Pakistan Musadik Malik berpidato di forum Sabtu — menteri federal Pakistan pertama di India sejak Mei 2023 (Bilawal Bhutto, Goa).
 **Sumber + tanggal:** ITDC India, Dainik Jagran, The News — 21 Nov 2026.
 **Bukti tanggal:** Sesi Sabtu 21 Nov; Malik dijadwalkan berpidato 21 Nov. (Kedatangan Malik Jumat 20 Nov — hook Sabtu adalah pidato/sesi.)
 
-### 27. Akvan remnants soak eastern India — India (Asia)
+### 26. Akvan remnants soak eastern India — India (Asia)
 **Judul:** Akvan's remnants bring heavy rain to eastern India
 **Ringkasan:** Prakiraan IMD untuk Sabtu 21 Nov: hujan lebat, petir, angin kencang 40–50 km/jam di Bihar, Jharkhand, Odisha, Bengal Barat, Assam/Meghalaya saat sisa Siklon Akvan (mendarat Jumat dekat Gopalpur, Odisha) bergerak ke darat; Kolkata tergenang Jumat; peringatan sampai 22 Nov.
 **Sumber + tanggal:** The Daily Jagran, Indian Witness, Madhyamam — 21 Nov 2026.
 **Bukti tanggal:** Prakiraan/hujan Sabtu 21 Nov. (Pendaratan Akvan sendiri Jumat — hook Sabtu adalah hujan sisa badai.)
 
-### 28. Cummins keeps captaincy — Australia (Oceania)
+### 27. Cummins keeps captaincy — Australia (Oceania)
 **Judul:** Cummins keeps the Australian captaincy
 **Ringkasan:** Dewan Cricket Australia bertemu Sabtu 21 Nov dan memberi dukungan bulat: Pat Cummins tetap kapten Tes (dan ODI) Australia meski ada klaim baru soal Sandpapergate (Khawaja/Bancroft); memimpin seri NZ mulai 9 Des di Perth; forum independen dibentuk untuk mendengar kesaksian.
 **Sumber + tanggal:** AAP, Particle News, The Daily Jagran — 21 Nov 2026.
 **Bukti tanggal:** Pernyataan CA dikeluarkan Sabtu; dewan bertemu Sabtu.
 
-### 29. Italy rail strike — Italia (Europe)
+### 28. Italy rail strike — Italia (Europe)
 **Judul:** Italy rail strike halts trains on Saturday
 **Ringkasan:** Mogok kereta nasional 21:00 Jumat 20 Nov → 20:00 Sabtu 21 Nov (CUB Trasporti/SGB/CAT); Trenitalia, Italo, Trenord terganggu; hanya kereta terjamin di jam 06:00–09:00 dan 18:00–21:00; plus mogok kontrol lalu lintas udara ENAV Sabtu 13:00–17:00.
 **Sumber + tanggal:** Treniamo (kalender resmi Kementerian Transportasi Italia), The Traveler, Hangout Bridges — 21 Nov 2026.
 **Bukti tanggal:** Mogok berjalan sepanjang Sabtu; gangguan terberat Sabtu.
 
-### 30. Naga votes on city status — Filipina (Asia)
+### 29. Naga votes on city status — Filipina (Asia)
 **Judul:** Naga votes on becoming a highly urbanized city
 **Ringkasan:** Plebisit Sabtu 21 Nov, pemungutan suara 05:00–15:00 (awal 05:00–07:00 untuk kelompok rentan), 119.259 pemilih terdaftar, 232 TPS berkelompok, 26 pusat pemungutan suara; meratifikasi Proklamasi No. 1267 yang mengubah Kota Naga menjadi Highly Urbanized City; COMELEC menargetkan partisipasi ~75%; Wali Kota Leni Robredo.
 **Sumber + tanggal:** The Chronicle (PNA), Street Journal MS, naga.gov.ph — 21 Nov 2026.
 **Bukti tanggal:** Plebisit berlangsung Sabtu 21 Nov.
 
-### 31. Java quake offshore — Indonesia (Asia)
+### 30. Java quake offshore — Indonesia (Asia)
 **Judul:** M4.6 quake off Java, felt in Jakarta area
 **Ringkasan:** Gempa M4.6, 67 km selatan Sukabumi, 17:50 UTC Jumat = 00:50 WIB Sabtu, kedalaman 17 km; juga M3.6 pukul 00:03 WIB 130 km barat daya Tasikmalaya; tidak ada laporan kerusakan/tsunami.
 **Sumber + tanggal:** BMKG (via Info Gempa Dunia), EarthquakeLive.org — 21 Nov 2026.
 **Bukti tanggal:** 00:50 WIB Sabtu (waktu lokal) — Sabtu di zona waktu Asia/Jakarta, sesuai aturan "Sabtu di setidaknya satu zona waktu".
 
-### 32. Chile quake north — Chile (Americas)
+### 31. Chile quake north — Chile (Americas)
 **Judul:** M4.7 quake in northern Chile
 **Ringkasan:** Gempa M4.7, 38 km timur laut Calama, Sabtu 21 Nov 01:24 UTC, kedalaman 120 km; tidak ada peringatan tsunami; getaran lemah.
 **Sumber + tanggal:** USGS (via Earthquake Today / Terremoto) — 21 Nov 2026, 01:24 UTC.
 **Bukti tanggal:** Waktu kejadian 01:24 UTC 21 Nov; USGS reviewed.
 
-### 33. Delhi chokes — India (Asia)
+### 32. Delhi chokes — India (Asia)
 **Judul:** Delhi chokes: AQI 279, very unhealthy
 **Ringkasan:** Kualitas udara Delhi Sabtu pagi: AQI 279 (CPCB, pukul 07:00; Sangat Tidak Sehat), polutan utama PM2.5; kabut, 22°C. (Angka 286 dari weather.com tidak terverifikasi ulang saat crosscheck — diganti 279 CPCB.)
 **Sumber + tanggal:** CPCB (07:00), Sabtu 21 Nov 2026.
 **Bukti tanggal:** Pembacaan CPCB Sabtu pagi 21 Nov (07:00); IANS 327 pukul 08:20, weather.com 181 — angka 286 tidak muncul di sumber mana pun.
 
-### 34. Visayas grid yellow alert — Filipina (Asia)
+### 33. Visayas grid yellow alert — Filipina (Asia)
 **Judul:** Visayas grid on yellow alert again today
 **Ringkasan:** Advisory NGCP per 08:00 Sabtu 21 Nov: yellow alert 17:00–20:00 Sabtu; kapasitas tersedia 2.543 MW vs puncak permintaan 2.427 MW; 675,7 MW tidak tersedia (TVI 2 mati tak terjadwal, PCPC + KSPC 2 mati terjadwal, TVI 1 derated); Jumat sempat red alert 17:00–18:00.
 **Sumber + tanggal:** NGCP (via Energy News PH / GMA News) — 21 Nov 2026.
 **Bukti tanggal:** Advisory NGCP bertanggal 21 Nov 08:00; yellow alert berlaku Sabtu sore.
 
-### 35. Tasmania One Nation donors — Australia (Oceania)
+### 34. Tasmania One Nation donors — Australia (Oceania)
 **Judul:** One Nation Tasmania's $70,000 donors revealed
 **Ringkasan:** ABC News, 21 Nov: One Nation Tasmania menerima $25.000 dari Huon Aquaculture (JBS Australia) dan $45.000 dari firma lobi The Advisory (klien termasuk pembangun stadion Macquarie Point BESIX Watpac); partai di 23% pada jajak pendapat EMRS terbaru.
 **Sumber + tanggal:** ABC News (via Threads/Facebook, 21 Nov 2026); Zot News.
 **Bukti tanggal:** Artikel ABC bertanggal 21 Nov 2026 (donasi itu sendiri tercatat 11 Nov — beritanya adalah pengungkapan/laporan ABC hari Sabtu).
 
-### 36. AUS–ENG T20 opener tonight — Australia (Oceania)
+### 35. AUS–ENG T20 opener tonight — Australia (Oceania)
 **Judul:** Australia v England T20 opener tonight at the MCG
 **Ringkasan:** T20I ke-1, MCG, Sabtu 21 Nov 19:15 AEDT; seri lima pertandingan; Inggris memenangi seri ODI 2-1 tiga hari lalu; Sam Harper debut untuk Australia; Australia pincang cedera.
 **Sumber + tanggal:** cricket.com.au, CricFacts, MCC — 21 Nov 2026.
@@ -267,9 +261,9 @@ Semua top-3 memakai keluarga template yang SAMA (kertas krem, masthead serif hit
 - **Yang membuat rank 3 menang:** peta halftone bertitik yang khas (pembeda visual), angka strip "0 climate deal agreed" yang berani, DATE CHECK dengan daftar silang (✗) yang panjang dan jujur, 36 cerita.
 
 ### Kesimpulan ATM — pembeda kita
-1. **Kemurnian tanggal:** rank 2 punya ~8 cerita Jumat, rank 3 ~6 cerita basi/salah tanggal, rank 1 ~9 brief Jumat. Daftar kita 36/36 terverifikasi Sabtu dari sumber primer — ini pembeda terbesar dan paling terukur.
+1. **Kemurnian tanggal:** rank 2 punya ~8 cerita Jumat, rank 3 ~6 cerita basi/salah tanggal, rank 1 ~9 brief Jumat. Daftar kita 35/35 terverifikasi Sabtu dari sumber primer — ini pembeda terbesar dan paling terukur.
 2. **Akurasi angka:** "3 missiles" (bukan 5); BepiColombo "due tonight 19:24 CET" (bukan sudah terjadi); Bitcoin $56.814 Sabtu pagi (bukan $58.983 Jumat).
-3. **Cerita Sabtu segar yang top-3 lewatkan:** plebisit Naga, gempa Jawa + Chile, yellow alert Visayas, donor One Nation Tasmania, T20 MCG malam ini, PPA PLN, rapat darurat arsenik Bangkok, investigasi BBC $811 juta, penipuan kremasi hewan Filipina, AQI Delhi 279 (CPCB).
+3. **Cerita Sabtu segar yang top-3 lewatkan:** plebisit Naga, gempa Jawa + Chile, yellow alert Visayas, donor One Nation Tasmania, T20 MCG malam ini, PPA PLN, investigasi BBC $811 juta, penipuan kremasi hewan Filipina, AQI Delhi 279 (CPCB).
 4. **Formula yang menang sudah jelas:** keluarga template (masthead + deck + strip angka + 3 hero + 10 kartu + peta + briefs + DATE CHECK). Jangan menyimpang dari keluarga ini — bedakan lewat isi, eksekusi ilustrasi, dan twist layout di dalamnya.
 5. **Bar paid place:** belum terbentuk untuk ni21 (dev masih provisional; rank 50 akan muncul saat lebih banyak entri dinilai). Pola ni19/ni20: bar rank-50 ≈ 987–990. Target realistis: dev ≥ 990 untuk masuk top 50; ≥ 991,9 untuk menyaingi rank 1 saat ini. (ESTIMASI dari pola ni19/ni20 — bukan janji.)
 
@@ -315,7 +309,7 @@ Semua top-3 memakai keluarga template yang SAMA (kertas krem, masthead serif hit
 - Sidang iklim pemuda Kanada — pembelaan pemerintah selesai Jumat 20 Nov.
 - Cash payout Taiwan NT$20.000 — lolos Jumat 20 Nov (50–46).
 - Tur pabrik Kim — KCNA melaporkan Kamis 19 Nov; kunjungan Selasa–Rabu 17–18 Nov.
-- Rencana enam poin arsenik Bangkok — diumumkan 16 Nov. (Hanya rapat darurat Sabtu yang dipakai.)
+- Rencana enam poin arsenik Bangkok — diumumkan 16 Nov. (Rapat darurat Sabtu sempat dipakai sebagai brief #25, dikeluarkan 22 Nov supaya kolom MORE STORIES rata.)
 - Evakuasi Akvan 372.000 — dilaporkan Jumat 20 Nov. (Hanya hujan sisa Sabtu yang dipakai.)
 - UNICEF korban anak Ukraina — terbit Jumat 20 Nov (Hari Anak Sedunia).
 - Hakim blokir triumphal arch Trump — Jumat 20 Nov.
@@ -330,6 +324,6 @@ Semua top-3 memakai keluarga template yang SAMA (kertas krem, masthead serif hit
 - Ledakan mobil Tira, Israel — Jumat malam 20 Nov.
 - Peringatan Polandia soal Russia — Jumat 20 Nov (kunjungan Rutte Sabtu terpisah).
 
-## Cadangan (terverifikasi Sabtu, tidak masuk 36 — pakai bila ada cerita di atas gugur)
+## Cadangan (terverifikasi Sabtu, tidak masuk 35 — pakai bila ada cerita di atas gugur)
 - **Chennai monsoon returns:** IMD (IANS, terbit 21 Nov 03:41 UTC): hujan ringan Sabtu, hujan lebat Senin di 10 distrik Tamil Nadu; monsoon timur laut kembali setelah jeda Akvan. (Mirip brief #27 — wilayah berbeda.)
 - **Canberra AI talks:** rank 1 kartu #10 — Australia–China setuju pembicaraan AI; Albanese akhiri perjalanan 11 hari. BELUM terverifikasi independen tanggalnya — jangan pakai tanpa verifikasi.
