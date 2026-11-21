@@ -64,6 +64,15 @@ Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
 +   teks tebal navy 12pt. Kotak + Sources TIDAK digeser (tinta 3 baris
 +   terukur 36px, muat di kotak 50px). Isi daftar + brief tidak
 +   menambah fakta baru.
++14. Revisi Kevin 22 Nov 05:12 WIB: (1) MORE STORIES "nembus" — baris
++   terakhir (#24/#35) tintanya menyentuh border bawah kotak (chip
++   bawah 939 > y2 936): pitch brief 14->13 + chip_h 14->13 (chip
++   tetap bersentuhan vertikal tanpa overlap); baris terakhir chip
++   915..928, gap 8px ke border; isi/jumlah brief TIDAK berubah.
++   (2) DATE CHECK brief jadi 2 baris (dibagi per kalimat, kata-kata
++   TETAP SAMA, terukur 399,7/358,1px < 870px): tinta 4 baris 48px,
++   DC_BOX y1 942->938 (tinggi 54px, gap 2px ke kotak di atas; y2 +
++   Sources TETAP).
 
 YANG TIDAK BERUBAH: kerangka masthead + deck + strip + 3 hero + 10 kartu
 + peta + brief + DATE CHECK; kemurnian tanggal 35/35 Sabtu + angka
@@ -355,9 +364,10 @@ DATECHECK_LIST = ("Left out as Friday 20 Nov news: Kyiv bridges hit \u00b7 "
                   "Not yet happened: BepiColombo (19:24 CET) \u00b7 ATP semis "
                   "\u00b7 T20 opener.")
 
-DC_BRIEF = ("Every story here happened, or was first reported, on "
-            "Saturday 21 Nov 2026. Friday\u2019s news was left out; "
-            "tonight\u2019s events have not happened yet.")
+DC_BRIEF_LINES = ("Every story here happened, or was first reported, on "
+                  "Saturday 21 Nov 2026.",
+                  "Friday\u2019s news was left out; tonight\u2019s events "
+                  "have not happened yet.")
 
 SOURCES = ("Sources: Reuters \u00b7 AP \u00b7 AFP \u00b7 BBC \u00b7 USGS \u00b7 "
            "NASA \u00b7 Antara \u00b7 Yonhap \u00b7 ATP Tour \u00b7 ESA \u00b7 "
@@ -877,7 +887,7 @@ CARD_X = [28, 223, 418, 613, 808]
 CARD_W = 186
 MAP_BOX = (28, 762, 408, 936)
 BRIEFS_BOX = (420, 762, 996, 936)
-DC_BOX = (28, 942, 996, 992)
+DC_BOX = (28, 938, 996, 992)
 SRC_Y = 998
 MAP_HEADER_H = 22
 
@@ -1200,8 +1210,8 @@ def draw_briefs(d):
     f_txt = F(SS400, 11)
     f_src = F(SS400, 10)
     f_chip = F(SS800, 10)
-    chip_h = 14
-    pitch = 14
+    chip_h = 13
+    pitch = 13
     per = [11, 11]
     idx = 0
     col_bottoms = []
@@ -1246,10 +1256,13 @@ def draw_briefs(d):
 def draw_footer(d):
     """DATE CHECK GAYA v20 (Keputusan Kevin 22 Nov 05:06 WIB, opsi A):
     chip merah "DATE CHECK" di kiri + kolom kanan berisi daftar
-    (2 baris) + brief ringkasan (1 baris), teks tebal navy 12pt.
+    (2 baris) + brief ringkasan (2 baris), teks tebal navy 12pt.
     "Kayak v20" MENANG atas lantai 16pt untuk kotak ini (v20 sendiri
-    pakai 12pt). Kotak + Sources TIDAK digeser: tinta 3 baris terukur
-    36px, muat di kotak 50px. TANPA catatan produksi/draf.
+    pakai 12pt). REV (Kevin 22 Nov 05:12 WIB, "brief nya buat 2 baris
+    aja"): brief dibagi per kalimat (kata-kata TETAP SAMA); tinta
+    4 baris terukur 48px, kotak membesar ke ATAS y1 942->938 (tinggi
+    54px; gap 2px ke kotak peta/brief di atas, y2 + Sources TETAP).
+    TANPA catatan produksi/draf.
     REV (Kevin 22 Nov 05:09 WIB, "Sources ga kebaca"): teks Sources
     9pt -> 16pt (lantai font), satu baris, daftar sumber LENGKAP
     (terukur 754,6px < 968px tersedia); warna tetap GREY; SRC_Y tetap
@@ -1268,16 +1281,19 @@ def draw_footer(d):
     d.rectangle([cx0, cy0, cx0 + chip_w, cy0 + chip_h], fill=RED)
     tt.text(d, (cx0 + cx0 + chip_w) // 2, (cy0 + cy0 + chip_h) // 2,
             "DATE CHECK", f_chip, WHITE, anchor="mm")
-    # --- kolom kanan: daftar (2 baris) + brief (1 baris), navy tebal 12pt ---
+    # --- kolom kanan: daftar (2 baris) + brief (2 baris), navy tebal 12pt ---
     tx0 = cx0 + chip_w + 12
     max_w = x2 - 8 - tx0
     f_t = F(SS800, 12)
     list_lines = wrap(d, DATECHECK_LIST, f_t, max_w)
-    brief_lines = wrap(d, DC_BRIEF, f_t, max_w)
+    brief_lines = list(DC_BRIEF_LINES)
     assert len(list_lines) == 2, (
         f"DATE CHECK daftar {len(list_lines)} baris: {list_lines}")
-    assert len(brief_lines) == 1, (
+    assert len(brief_lines) == 2, (
         f"DATE CHECK brief {len(brief_lines)} baris: {brief_lines}")
+    for bl in brief_lines:
+        assert d.textlength(bl, font=f_t) <= max_w, (
+            f"DATE CHECK brief terlalu lebar: {bl}")
     lines = list_lines + brief_lines
     lh = 12
     bb = d.textbbox((tx0, 0), lines[0], font=f_t, anchor="la")
