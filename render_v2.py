@@ -356,6 +356,9 @@ DECK = ("COP31 in overtime  \u00b7  Three missiles down over Riyadh  \u00b7  "
         "Peru quake 6.7  \u00b7  Kryvyi Rih double strike  \u00b7  "
         "Davao: all 146 safe")
 
+# Meta masthead Varian D (sketsa varian-d.png): 35 cerita, 7 segmen bar region.
+META = "THE WORLD IN ONE DAY \u00b7 35 STORIES \u00b7 7 REGIONS"
+
 DATECHECK_LIST = ("Left out as Friday 20 Nov news: Kyiv bridges hit \u00b7 "
                   "missile in Poland \u00b7 Wall Street correction \u00b7 UK\u2013EU "
                   "deal \u00b7 Akvan landfall \u00b7 ICJ Myanmar ruling \u00b7 "
@@ -908,31 +911,43 @@ def draw_tracked(d, cx, y, text, font, fill, tracking=-0.4):
 
 
 def draw_masthead(d):
-    """Judul HITAM Gelasio 700 56px satu baris + deck merah Gelasio
-    Italic 12px (5 cerita terbesar, tanpa awalan)."""
+    """Masthead Varian D (Kevin 22 Nov 05:23, 'Koran klasik super-bersih'):
+    meta caps merah SS800 12px rata tengah + judul tanggal sans SS700
+    56px hitam satu baris RATA KIRI + garis hitam tebal 4px + teaser
+    (DECK) SS600 16px non-italic rata kiri. Zona y 16..~105, strip di
+    y 108 TIDAK digeser. Sketsa asli 64pt tidak muat di zona 92px
+    (tinta 58px + meta + garis + teaser > 88px), jadi judul 56pt
+    (sama besar dengan judul lama, tapi sans + rata kiri)."""
     tt = TileText("masthead")
-    f_title = F(GEL700, 56)
+    # meta
+    f_meta = F(SS800, 12)
+    mb = d.textbbox((W // 2, TITLE_Y), META, font=f_meta, anchor="mt")
+    d.text((W // 2, TITLE_Y), META, font=f_meta, fill=RED, anchor="mt")
+    tt.add(mb, "meta")
+    # judul tanggal, rata kiri (anchor "lt": y = tepi atas tinta)
+    f_title = F(SS700, 56)
     title = "Saturday 21 November 2026"
-    tw = tracked_width(d, title, f_title)
-    assert tw <= W - 56, f"judul terlalu lebar: {tw:.0f}px"
-    tb = d.textbbox((W // 2, TITLE_Y), title, font=f_title, anchor="mt")
-    x0, x1 = draw_tracked(d, W // 2, TITLE_Y, title, f_title, INK)
-    tt.add((int(x0), tb[1], int(x1), tb[3]), "title")
-    title_bottom = tb[3]
-    f_deck = F(GEL_IT, 12)
+    ty = mb[3] + 3
+    tb = d.textbbox((28, ty), title, font=f_title, anchor="lt")
+    assert tb[2] - 28 <= W - 56, f"judul terlalu lebar: {tb[2]-28:.0f}px"
+    d.text((28, ty), title, font=f_title, fill=INK, anchor="lt")
+    tt.add(tb, "title")
+    # garis hitam tebal
+    rule_y = tb[3] + 3
+    d.rectangle([28, rule_y, 996, rule_y + 4], fill=INK)
+    # teaser satu baris, non-italic, 16pt (lantai font, anchor "lt")
+    f_deck = F(SS600, 16)
     dw = d.textlength(DECK, font=f_deck)
     assert dw <= W - 56, f"deck terlalu lebar: {dw:.0f}px"
-    b = d.textbbox((W // 2, title_bottom + 14), DECK, font=f_deck,
-                   anchor="mt")
-    d.text((W // 2, title_bottom + 14), DECK, font=f_deck, fill=RED,
-           anchor="mt")
+    dy = rule_y + 4 + 3
+    b = d.textbbox((28, dy), DECK, font=f_deck, anchor="lt")
+    d.text((28, dy), DECK, font=f_deck, fill=INK, anchor="lt")
     tt.add(b, "deck")
-    assert 13 <= b[1] - title_bottom <= 15, (
-        f"celah judul->deck {b[1] - title_bottom}px")
+    assert b[3] <= STRIP_Y - 2, f"teaser menabrak strip: bawah {b[3]}"
     reg_layout((28, TITLE_Y, 996, b[3]), "masthead")
-    return {"title_w": round(tw, 1), "deck_w": round(dw, 1),
+    return {"title_w": round(tb[2] - 28, 1), "deck_w": round(dw, 1),
             "deck_bottom": b[3],
-            "title_pct": round(100 * tw / W, 1)}
+            "title_pct": round(100 * (tb[2] - 28) / W, 1)}
 
 
 def draw_strip(d):
