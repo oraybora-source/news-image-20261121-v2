@@ -352,12 +352,17 @@ REGION_COLORS = {
 # (H3 vs kartu 7; kartu 7 vs kartu 12) — greedy di assign_banners.
 REGION_ALT = {"AMERICAS": "AMERICAS_ALT"}
 
-DECK = ("COP31 in overtime  \u00b7  Three missiles down over Riyadh  \u00b7  "
-        "Peru quake 6.7  \u00b7  Kryvyi Rih double strike  \u00b7  "
-        "Davao: all 146 safe")
-
-# Meta masthead Varian D (sketsa varian-d.png): 35 cerita, 7 segmen bar region.
-META = "THE WORLD IN ONE DAY \u00b7 35 STORIES \u00b7 7 REGIONS"
+# Meta masthead Varian G (Kevin 22 Nov 05:29, 'ikutin rank 1, tapi
+# bedakan'): struktur rank 1 samatch-we — meta terbelah + judul serif
+# raksasa rata tengah + subjudul italic + garis bawah. Pembeda: angka
+# "21" merah, subjudul 5 teaser 2 baris (rank 1 cuma 3), garis bawah
+# MERAH tebal 4px (rank 1 hitam tipis), meta kanan "ALL DATED" tanpa
+# pengulangan tanggal.
+META_LEFT = "THE WORLD IN ONE DAY"
+META_RIGHT = "35 STORIES \u00b7 7 REGIONS \u00b7 ALL DATED"
+DECK_LINES = ("COP31 in overtime \u00b7 3 missiles down over Riyadh "
+              "\u00b7 Peru quake 6.7",
+              "Kryvyi Rih double strike \u00b7 Davao: all 146 safe")
 
 DATECHECK_LIST = ("Left out as Friday 20 Nov news: Kyiv bridges hit \u00b7 "
                   "missile in Poland \u00b7 Wall Street correction \u00b7 UK\u2013EU "
@@ -911,43 +916,66 @@ def draw_tracked(d, cx, y, text, font, fill, tracking=-0.4):
 
 
 def draw_masthead(d):
-    """Masthead Varian D (Kevin 22 Nov 05:23, 'Koran klasik super-bersih'):
-    meta caps merah SS800 12px rata tengah + judul tanggal sans SS700
-    56px hitam satu baris RATA KIRI + garis hitam tebal 4px + teaser
-    (DECK) SS600 16px non-italic rata kiri. Zona y 16..~105, strip di
-    y 108 TIDAK digeser. Sketsa asli 64pt tidak muat di zona 92px
-    (tinta 58px + meta + garis + teaser > 88px), jadi judul 56pt
-    (sama besar dengan judul lama, tapi sans + rata kiri)."""
+    """Masthead Varian G (Kevin 22 Nov 05:29, 'ikutin rank 1, tapi
+    bedakan'): struktur rank 1 samatch-we — meta terbelah (kiri merah,
+    kanan hitam) + judul serif Gelasio-700 rata tengah + subjudul
+    italic 2 baris + garis bawah MERAH tebal 4px. Pembeda dari rank 1:
+    angka "21" merah, subjudul 5 teaser (rank 1 cuma 3), garis merah
+    tebal (rank 1 hitam tipis), meta kanan "ALL DATED" tanpa
+    pengulangan tanggal. Tumpukan terukur (anchor "lt" = y tepi atas
+    tinta): meta 11pt y16..25, judul 44pt y27..72, deck 12pt
+    y74..86 + y88..100 (pitch 14), garis y102..106; strip y108
+    TIDAK digeser (gap 2px)."""
     tt = TileText("masthead")
-    # meta
-    f_meta = F(SS800, 12)
-    mb = d.textbbox((W // 2, TITLE_Y), META, font=f_meta, anchor="mt")
-    d.text((W // 2, TITLE_Y), META, font=f_meta, fill=RED, anchor="mt")
-    tt.add(mb, "meta")
-    # judul tanggal, rata kiri (anchor "lt": y = tepi atas tinta)
-    f_title = F(SS700, 56)
-    title = "Saturday 21 November 2026"
-    ty = mb[3] + 3
-    tb = d.textbbox((28, ty), title, font=f_title, anchor="lt")
-    assert tb[2] - 28 <= W - 56, f"judul terlalu lebar: {tb[2]-28:.0f}px"
-    d.text((28, ty), title, font=f_title, fill=INK, anchor="lt")
-    tt.add(tb, "title")
-    # garis hitam tebal
-    rule_y = tb[3] + 3
-    d.rectangle([28, rule_y, 996, rule_y + 4], fill=INK)
-    # teaser satu baris, non-italic, 16pt (lantai font, anchor "lt")
-    f_deck = F(SS600, 16)
-    dw = d.textlength(DECK, font=f_deck)
-    assert dw <= W - 56, f"deck terlalu lebar: {dw:.0f}px"
-    dy = rule_y + 4 + 3
-    b = d.textbbox((28, dy), DECK, font=f_deck, anchor="lt")
-    d.text((28, dy), DECK, font=f_deck, fill=INK, anchor="lt")
-    tt.add(b, "deck")
-    assert b[3] <= STRIP_Y - 2, f"teaser menabrak strip: bawah {b[3]}"
-    reg_layout((28, TITLE_Y, 996, b[3]), "masthead")
-    return {"title_w": round(tb[2] - 28, 1), "deck_w": round(dw, 1),
-            "deck_bottom": b[3],
-            "title_pct": round(100 * (tb[2] - 28) / W, 1)}
+    # meta terbelah: kiri merah, kanan hitam (anchor "lt"/"rt")
+    f_meta = F(SS800, 11)
+    ml = d.textbbox((28, TITLE_Y), META_LEFT, font=f_meta, anchor="lt")
+    d.text((28, TITLE_Y), META_LEFT, font=f_meta, fill=RED, anchor="lt")
+    tt.add(ml, "meta-left")
+    mr = d.textbbox((996, TITLE_Y), META_RIGHT, font=f_meta, anchor="rt")
+    d.text((996, TITLE_Y), META_RIGHT, font=f_meta, fill=INK, anchor="rt")
+    tt.add(mr, "meta-right")
+    assert ml[2] < mr[0], "meta kiri-kanan bertabrakan"
+    # judul serif rata tengah, "21" merah (3 potong, anchor "lt":
+    # semua potong mulai dari cap-height yang sama)
+    f_title = F(GEL700, 44)
+    parts = [("Saturday ", INK), ("21", RED), (" November 2026", INK)]
+    total_w = sum(d.textlength(t, font=f_title) for t, _ in parts)
+    assert total_w <= W - 56, f"judul terlalu lebar: {total_w:.0f}px"
+    ty = ml[3] + 2
+    x = W // 2 - total_w / 2.0
+    tb_all = None
+    for t, fill in parts:
+        b = d.textbbox((x, ty), t, font=f_title, anchor="lt")
+        d.text((x, ty), t, font=f_title, fill=fill, anchor="lt")
+        tt.add(b, "title")
+        tb_all = (b if tb_all is None else
+                  (min(tb_all[0], b[0]), min(tb_all[1], b[1]),
+                   max(tb_all[2], b[2]), max(tb_all[3], b[3])))
+        x += d.textlength(t, font=f_title)
+    # subjudul italic 2 baris, rata tengah (anchor "lt")
+    f_deck = F(GEL_IT, 12)
+    dy = tb_all[3] + 2
+    deck_boxes = []
+    for i, line in enumerate(DECK_LINES):
+        lw = d.textlength(line, font=f_deck)
+        assert lw <= W - 56, f"deck baris {i+1} terlalu lebar: {lw:.0f}px"
+        lx = W // 2 - lw / 2.0
+        b = d.textbbox((lx, dy + i * 14), line, font=f_deck, anchor="lt")
+        d.text((lx, dy + i * 14), line, font=f_deck, fill=INK, anchor="lt")
+        tt.add(b, f"deck-{i+1}")
+        deck_boxes.append(b)
+    # garis merah tebal 4px selebar halaman
+    rule_y = deck_boxes[-1][3] + 2
+    d.rectangle([28, rule_y, 996, rule_y + 4], fill=RED)
+    assert rule_y + 4 <= STRIP_Y - 2, f"garis menabrak strip: bawah {rule_y+4}"
+    reg_layout((28, TITLE_Y, 996, rule_y + 4), "masthead")
+    return {"title_w": round(total_w, 1),
+            "deck_w": round(max(d.textlength(l, font=f_deck)
+                                for l in DECK_LINES), 1),
+            "deck_bottom": deck_boxes[-1][3],
+            "rule_bottom": rule_y + 4,
+            "title_pct": round(100 * total_w / W, 1)}
 
 
 def draw_strip(d):
