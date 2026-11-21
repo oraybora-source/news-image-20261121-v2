@@ -33,6 +33,13 @@ Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
 8. Revisi Kevin 22 Nov 04:41 WIB: perbesar teks MORE STORIES supaya
    mengisi kotak (font kota/teks 10->11, sumber 9->10, chip 9->10,
    pitch 13->15, baris mulai y1+26); isi brief TIDAK berubah.
+9. Revisi Kevin 22 Nov 04:43 WIB: perbesar chip hitam sumber di semua
+   13 gambar supaya terbaca tanpa zoom (font 8->12, chip 12px->17px,
+   padding lebar 10->12); nama sumber TIDAK berubah.
+10. Revisi Kevin 22 Nov 04:44 WIB: perbesar pin peta (r=7->r=11, angka
+   8pt->13pt, jarak minimum 18->25px, offset sampai 30px; acuan pin
+   ni20 rev8) + label peta (judul 11->14, "Pins 1-13" 12->14, legenda
+   8->11, chip 16px->20px); posisi kota + warna pin TIDAK berubah.
 
 YANG TIDAK BERUBAH: kerangka masthead + deck + strip + 3 hero + 10 kartu
 + peta + brief + DATE CHECK; kemurnian tanggal 35/35 Sabtu + angka
@@ -951,8 +958,9 @@ def draw_region_bar(d):
 def make_panel_img(painter_img, banner_color, banner_text, source,
                    banner_h, source_left):
     """Susun gambar panel: banner blok warna solid di atas (teks putih
-    bold 20px, rata kiri) + ilustrasi di bawah + chip sumber kecil di
-    bawah gambar (kiri untuk hero, kanan untuk kartu)."""
+    bold 20px, rata kiri) + ilustrasi di bawah + chip sumber hitam di
+    bawah gambar (kiri untuk hero, kanan untuk kartu; font 12px,
+    tinggi 17px, terbaca tanpa zoom)."""
     w, ih = painter_img.size
     im = Image.new("RGB", (w, ih + banner_h), banner_color)
     d = ImageDraw.Draw(im)
@@ -963,9 +971,11 @@ def make_panel_img(painter_img, banner_color, banner_text, source,
         f"banner '{banner_text}' terlalu lebar: {bw:.0f}px > {w - 12}px")
     d.text((6, banner_h // 2), banner_text, font=f_b, fill=WHITE,
            anchor="lm")
-    f_s = F(SS800, 8)
+    f_s = F(SS800, 12)
     tw = d.textlength(source, font=f_s)
-    cw, ch = int(tw) + 10, 12
+    cw, ch = int(tw) + 12, 17
+    assert cw <= w - 12, (
+        f"chip sumber '{source}' terlalu lebar: {cw}px > {w - 12}px")
     if source_left:
         sx = 6
     else:
@@ -1047,7 +1057,7 @@ def map_xy(lon, lat, x0, y0):
 def draw_map(im, d):
     """Peta kiri bawah (CH5: lebih terang + pin warna per region): strip
     header tan + navy + daratan Natural Earth + 13 pin bernomor warna
-    region (r=7) + legenda 2 chip."""
+    region (r=11, angka 13pt) + legenda 2 chip."""
     x1, y1, x2, y2 = MAP_BOX
     ny = y1 + MAP_HEADER_H
     reg_layout(MAP_BOX, "map")
@@ -1066,14 +1076,14 @@ def draw_map(im, d):
         md.polygon(pts, fill=MAP_LAND, outline=MAP_LAND_OUT)
     im.paste(mtmp, (x1 + 1, ny + 1))
     md = ImageDraw.Draw(im)
-    fp = F(SS800, 8)
+    fp = F(SS800, 13)
     placed = []
     offset_used = []
     skipped = []
 
     def place(px, py):
         for (qx, qy) in placed:
-            if ((px - qx) ** 2 + (py - qy) ** 2) ** 0.5 < 18:
+            if ((px - qx) ** 2 + (py - qy) ** 2) ** 0.5 < 25:
                 return False
         placed.append((px, py))
         return True
@@ -1085,7 +1095,10 @@ def draw_map(im, d):
                        (0, 18), (0, -18),
                        (14, 14), (14, -14), (-14, 14), (-14, -14),
                        (20, 0), (-20, 0), (24, 0), (-24, 0),
-                       (0, 24), (0, -24)]:
+                       (0, 24), (0, -24),
+                       (18, 18), (18, -18), (-18, 18), (-18, -18),
+                       (26, 0), (-26, 0), (0, 26), (0, -26),
+                       (30, 0), (-30, 0), (0, 30), (0, -30)]:
             if place(px + dx, py + dy):
                 return (px + dx, py + dy), (dx, dy)
         return None, None
@@ -1102,19 +1115,18 @@ def draw_map(im, d):
         if off != (0, 0):
             offset_used.append((p["num"], city, off))
         qx, qy = pos
-        assert x1 + 8 <= qx <= x2 - 8 and ny + 8 <= qy <= y2 - 8, (
+        assert x1 + 12 <= qx <= x2 - 12 and ny + 12 <= qy <= y2 - 12, (
             f"pin {p['num']} keluar peta")
         pin_color = REGION_COLORS[p["region"]]
-        md.ellipse([qx - 7, qy - 7, qx + 7, qy + 7], fill=pin_color,
+        md.ellipse([qx - 11, qy - 11, qx + 11, qy + 11], fill=pin_color,
                    outline=WHITE, width=1)
         mark = str(p["num"])
-        tw = md.textlength(mark, font=fp)
-        md.text((qx - tw / 2, qy - 5), mark, font=fp, fill=WHITE)
+        md.text((qx, qy), mark, font=fp, fill=WHITE, anchor="mm")
     assert not skipped, f"pin hilang: {skipped}"
     assert len(placed) == 13, f"pin terpasang {len(placed)}, harus 13"
     # Header strip tan: dua teks SATU baseline (ref-7 Kevin 23:14 WIB).
-    f_t = F(SS800, 11)
-    f_n = F(SS800, 12)
+    f_t = F(SS800, 14)
+    f_n = F(SS800, 14)
     title = "WHERE IT HAPPENED"
     note = "Pins 1\u201313 (Lead & Feature)"
     hdr_cy = y1 + MAP_HEADER_H // 2
@@ -1128,16 +1140,16 @@ def draw_map(im, d):
     assert abs((tb[1] + tb[3]) // 2 - (nb[1] + nb[3]) // 2) <= 1, (
         "judul peta dan teks pins tidak satu baseline")
     # Legenda 2 chip gelap DI DALAM laut, bawah-kiri.
-    f_l = F(SS800, 8)
-    ly = y2 - 24
+    f_l = F(SS800, 11)
+    ly = y2 - 27
     lx = x1 + 8
     for txt in ("1\u20133 Lead", "4\u201313 Feature Stories"):
         tw = d.textlength(txt, font=f_l)
-        cw = int(tw) + 24
-        d.rounded_rectangle([lx, ly, lx + cw, ly + 16], radius=3,
+        cw = int(tw) + 28
+        d.rounded_rectangle([lx, ly, lx + cw, ly + 20], radius=3,
                             fill=(10, 18, 36))
-        d.ellipse([lx + 5, ly + 6, lx + 9, ly + 10], fill=RED)
-        d.text((lx + 13, ly + 8), txt, font=f_l, fill=WHITE, anchor="lm")
+        d.ellipse([lx + 6, ly + 7, lx + 12, ly + 13], fill=RED)
+        d.text((lx + 16, ly + 10), txt, font=f_l, fill=WHITE, anchor="lm")
         lx += cw + 6
     return {"placed": len(placed), "offset_used": offset_used,
             "skipped": skipped}
