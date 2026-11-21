@@ -1249,7 +1249,11 @@ def draw_footer(d):
     (2 baris) + brief ringkasan (1 baris), teks tebal navy 12pt.
     "Kayak v20" MENANG atas lantai 16pt untuk kotak ini (v20 sendiri
     pakai 12pt). Kotak + Sources TIDAK digeser: tinta 3 baris terukur
-    36px, muat di kotak 50px. TANPA catatan produksi/draf."""
+    36px, muat di kotak 50px. TANPA catatan produksi/draf.
+    REV (Kevin 22 Nov 05:09 WIB, "Sources ga kebaca"): teks Sources
+    9pt -> 16pt (lantai font), satu baris, daftar sumber LENGKAP
+    (terukur 754,6px < 968px tersedia); warna tetap GREY; SRC_Y tetap
+    998 (tinta 1003..1019, margin bawah ~5px)."""
     x1, y1, x2, y2 = DC_BOX
     reg_layout(DC_BOX, "datecheck")
     tt = TileText("footer")
@@ -1284,7 +1288,7 @@ def draw_footer(d):
         tt.text(d, tx0, y, ln, f_t, NAVY)
         y += lh
     assert y - lh + ink_top + ink_h <= y2 - 2, "DATE CHECK meluber"
-    tt.text(d, 28, SRC_Y, SOURCES, F(SS400, 9), GREY)
+    tt.text(d, 28, SRC_Y, SOURCES, F(SS400, 16), GREY)
     return {"dc_lines": len(lines), "dc_pt": 12}
 
 
