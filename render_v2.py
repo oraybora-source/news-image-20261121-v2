@@ -30,6 +30,9 @@ Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
 7. Revisi Kevin 22 Nov 04:38 WIB: hapus brief #25 Bangkok ("Anutin
    calls emergency meeting") supaya kolom MORE STORIES rata 11/11;
    brief 26-36 jadi 25-35; total 35/35 Sabtu; ASIA 12.
+8. Revisi Kevin 22 Nov 04:41 WIB: perbesar teks MORE STORIES supaya
+   mengisi kotak (font kota/teks 10->11, sumber 9->10, chip 9->10,
+   pitch 13->15, baris mulai y1+26); isi brief TIDAK berubah.
 
 YANG TIDAK BERUBAH: kerangka masthead + deck + strip + 3 hero + 10 kartu
 + peta + brief + DATE CHECK; kemurnian tanggal 35/35 Sabtu + angka
@@ -1153,25 +1156,27 @@ def draw_briefs(d):
     tt.text(d, x2 - 8, y1 + 4, "14\u201335", F(SS800, 11), RED, anchor="ra")
     d.line([(x1 + 8, y1 + 21), (x2 - 8, y1 + 21)], fill=RED, width=2)
     cw = (x2 - x1 - 16 - 12) // 2
-    f_city = F(SS800, 10)
-    f_txt = F(SS400, 10)
-    f_src = F(SS400, 9)
-    f_chip = F(SS800, 9)
+    f_city = F(SS800, 11)
+    f_txt = F(SS400, 11)
+    f_src = F(SS400, 10)
+    f_chip = F(SS800, 10)
+    chip_h = 14
+    pitch = 15
     per = [11, 11]
     idx = 0
     col_bottoms = []
     for c in range(2):
         cx = x1 + 8 + c * (cw + 12)
-        yy = y1 + 30
+        yy = y1 + 26
         for k in range(per[c]):
             n, city, t, src, region = BRIEFS[idx]
             idx += 1
             chip_w = 20
-            d.rounded_rectangle([cx, yy, cx + chip_w, yy + 13], radius=2,
+            d.rounded_rectangle([cx, yy, cx + chip_w, yy + chip_h], radius=2,
                                 fill=REGION_COLORS[region])
-            nb = d.textbbox((cx + chip_w // 2, yy + 6), str(n), font=f_chip,
+            nb = d.textbbox((cx + chip_w // 2, yy + chip_h // 2), str(n), font=f_chip,
                             anchor="mm")
-            d.text((cx + chip_w // 2, yy + 6), str(n), font=f_chip,
+            d.text((cx + chip_w // 2, yy + chip_h // 2), str(n), font=f_chip,
                    fill=WHITE, anchor="mm")
             tx = cx + chip_w + 4
             city_s = f"{city}: "
@@ -1188,8 +1193,8 @@ def draw_briefs(d):
             d.text((tx, yy), t, font=f_txt, fill=INK, anchor="la")
             d.text((tx + w_txt, yy), src_s, font=f_src, fill=GREY,
                    anchor="la")
-            tt.add((cx, yy, cx + total, yy + 13), f"brief{n}")
-            yy += 13
+            tt.add((cx, yy, cx + total, yy + chip_h), f"brief{n}")
+            yy += pitch
         col_bottoms.append(yy - 13)
     assert idx == 22, f"briefs terpasang {idx}, harus 22"
     assert max(col_bottoms) - min(col_bottoms) <= 20, (
