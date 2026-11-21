@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """render_v2.py — ni21 V2 "Fair Kernel" improve (duel-loop attempt 1).
 
-Perubahan vs V1 (5 CHANGES FOR IMPROVE dari loss_report_a1.md + FIX manual
-crosscheck attempt 1, B1-B3, 21 Nov 21:30 WIB):
+Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
 1. Banner-label + source strip di semua 13 gambar (banner = topik+nilai,
    putih bold 20px di blok warna solid = warna region; chip sumber kecil
    di bawah gambar). Warna banner tetangga ortogonal selalu beda >= 25
@@ -14,21 +13,23 @@ crosscheck attempt 1, B1-B3, 21 Nov 21:30 WIB):
    tebal + brief 1 baris (fakta/angka kunci) + (Sumber).
 4. Reselection feature-13: kartu Bitcoin ($56.814, -3,6%) + Dragon
    splashdown MASUK; Vietnam law + freight derail pindah ke brief;
-   Rahul -> 136 / 344-2. Kartu Jumat masuk di FIX manual (lihat 6).
+   Rahul -> 136 / 344-2. TIDAK ada kartu Jumat (uranium/China-Jepang)
+   — keputusan itu masih terbuka untuk Kevin; kemurnian Sabtu 36/36.
 5. Legibility pass 390px: hero headline 26px, kartu 18px, banner 20px;
    peta lebih terang + pin warna per region.
-6. FIX manual (B1, crosscheck FIX_FIRST): kartu Jumat masuk — #6 uranium
-   Iran (Dewan IAEA menuntut data 440,9 kg uranium 60%, THU 19 NOV) +
-   #13 China-Jepang Taiwan (Beijing menuntut Tokyo koreksi pernyataan
-   Taiwan, FRI 20 NOV); BepiColombo + ATP pindah ke brief; 2 brief
-   terlemah keluar (hoki India malam ini, donor One Nation Tasmania);
-   bar region MIDDLE EAST 5 / OCEANIA 3; pin Tehran + Beijing; banner
-   MIDDLE EAST ALT (maroon) untuk kartu 11 karena kartu 6 juga merah.
-   (B3): brief Delhi AQI 286 -> 279 (CPCB 07:00). (B2): kit fresh ni21.
+6. REVERT (Keputusan Kevin 22 Nov 04:24 WIB — MEMBATALKAN keputusan
+   20:28 WIB; why_we_lost_1.md change #1): kartu Jumat/Kamis KELUAR
+   dari feature — #6 kembali BepiColombo (Darmstadt, GLOBAL,
+   "TONIGHT 19:24") + #13 kembali ATP semis (Turin, EUROPE,
+   "SEMIS TONIGHT"); uranium Iran + China–Jepang Taiwan kembali ke
+   DATE CHECK "left out" (DITOLAK, bukan brief); brief hoki India +
+   donor Tasmania dipulihkan; bar region kembali MIDDLE EAST 4 /
+   OCEANIA 4; TIDAK ada lagi label tanggal hari sebelumnya di kartu.
+   Dipertahankan dari FIX manual: Delhi AQI 279 (CPCB 07:00, B3 —
+   angka 286 tidak terverifikasi).
 
 YANG TIDAK BERUBAH: kerangka masthead + deck + strip + 3 hero + 10 kartu
-+ peta + brief + DATE CHECK; kemurnian tanggal 34 Sabtu + 2 kartu
-berlabel tanggal eksplisit (Keputusan Kevin 20:28 WIB) + angka
++ peta + brief + DATE CHECK; kemurnian tanggal 36/36 Sabtu + angka
 terverifikasi (3 / $56.814 / 2-42 / BepiColombo "tonight"); lead trio
 COP31 / Riyadh / Peru; DATE CHECK jujur + menonjol; teknis <=1 MiB,
 1024x1024, deterministik 2x, tanpa network; satu gaya ilustrasi datar;
@@ -199,12 +200,12 @@ CARDS = [
      "sum": "Engine fire warning; all safe after slide evacuation.",
      "painter": "davao", "map_city": "Davao",
      "banner": "ALL 146 SAFE", "source": "AP"},
-    {"num": 6, "city": "Tehran", "place": "TEHRAN, IRAN · THU 19 NOV",
-     "topic": "URANIUM", "region": "MIDDLE EAST",
-     "title": "IAEA demands Iran uranium data",
-     "sum": "Board demands data on 440.9 kg of 60% uranium.",
-     "painter": "uranium", "map_city": "Tehran",
-     "banner": "440.9 KG URANIUM", "source": "AP · Reuters"},
+    {"num": 6, "city": "Darmstadt", "place": "DARMSTADT, GERMANY",
+     "topic": "SPACE", "region": "GLOBAL",
+     "title": "BepiColombo arrives at Mercury",
+     "sum": "Orbit burn due 19:24 CET tonight; 8-year trip ends.",
+     "painter": "bepi", "map_city": "Darmstadt",
+     "banner": "TONIGHT 19:24", "source": "ESA"},
     {"num": 7, "city": "Washington", "place": "WASHINGTON, USA",
      "topic": "TAX", "region": "AMERICAS",
      "title": "Trump vows tax on data centres",
@@ -241,19 +242,16 @@ CARDS = [
      "sum": "Cargo Dragon undocks from ISS; splashdown 16:55 EST.",
      "painter": "dragon", "map_city": "California Coast",
      "banner": "SPLASHDOWN", "source": "NASA"},
-    {"num": 13, "city": "Beijing", "place": "BEIJING, CHINA · FRI 20 NOV",
-     "topic": "TAIWAN", "region": "ASIA",
-     "title": "China warns Japan on Taiwan",
-     "sum": "Beijing: correct the Taiwan remarks now.",
-     "painter": "chinajapan", "map_city": "Beijing",
-     "banner": "TAIWAN WARNING", "source": "Reuters"},
+    {"num": 13, "city": "Turin", "place": "TURIN, ITALY",
+     "topic": "TENNIS", "region": "EUROPE",
+     "title": "ATP Finals semis in Turin",
+     "sum": "Alcaraz–Shelton, Zverev–Medvedev; both tonight.",
+     "painter": "tennis", "map_city": "Turin",
+     "banner": "SEMIS TONIGHT", "source": "ATP Tour"},
 ]
 
 # Briefs 14-36: (nomor, kota, teks 1 baris + fakta/angka kunci, sumber,
 # region). 2 kolom, 12/11 per kolom.
-# FIX (B1): BepiColombo (6->35) + ATP semis (13->34) pindah ke brief;
-# hoki India + donor Tasmania keluar (terlemah).
-# FIX (B3): Delhi AQI 286 -> 279 (CPCB 07:00, terverifikasi crosscheck).
 BRIEFS = [
     (14, "WARSAW", "Rutte flies to Warsaw today", "AP", "EUROPE"),
     (15, "IRAQ", "Road to Karbala reopens", "ANF", "MIDDLE EAST"),
@@ -262,21 +260,21 @@ BRIEFS = [
     (18, "SEJONG", "Freight train derails", "Yonhap", "ASIA"),
     (19, "S. AFRICA", "ANC fights to keep key cities", "BBC", "AFRICA"),
     (20, "USA", "$811m migrants scam continues", "BBC", "AMERICAS"),
-    (21, "LISBON", "CGTP marches today", "downriver", "EUROPE"),
-    (22, "MANILA", "Pet cremation scam: 170 dumped", "BBC", "ASIA"),
-    (23, "JAKARTA", "PLN signs clean-power deals", "Antara", "ASIA"),
-    (24, "BANGKOK", "Anutin calls emergency meeting", "Nation", "ASIA"),
-    (25, "NEW DELHI", "Pakistani minister speaks", "The News", "ASIA"),
-    (26, "E. INDIA", "Akvan rain soaks east India", "Jagran", "ASIA"),
-    (27, "AUSTRALIA", "Cummins keeps the captaincy", "AAP", "OCEANIA"),
-    (28, "ITALY", "Rail strike halts trains today", "Treniamo", "EUROPE"),
-    (29, "NAGA", "Naga votes on city status", "PNA", "ASIA"),
-    (30, "JAVA", "M4.6 quake off Java", "BMKG", "ASIA"),
-    (31, "CHILE", "M4.7 quake in northern Chile", "USGS", "AMERICAS"),
-    (32, "DELHI", "Delhi chokes: AQI 279", "CPCB", "ASIA"),
-    (33, "VISAYAS", "Grid on yellow alert", "NGCP", "ASIA"),
-    (34, "TURIN", "ATP semis tonight", "ATP Tour", "EUROPE"),
-    (35, "DARMSTADT", "BepiColombo due 19:24", "ESA", "GLOBAL"),
+    (21, "INDIA", "India vs Korea tonight", "Hockey India", "ASIA"),
+    (22, "LISBON", "CGTP marches today", "downriver", "EUROPE"),
+    (23, "MANILA", "Pet cremation scam: 170 dumped", "BBC", "ASIA"),
+    (24, "JAKARTA", "PLN signs clean-power deals", "Antara", "ASIA"),
+    (25, "BANGKOK", "Anutin calls emergency meeting", "Nation", "ASIA"),
+    (26, "NEW DELHI", "Pakistani minister speaks", "The News", "ASIA"),
+    (27, "E. INDIA", "Akvan rain soaks east India", "Jagran", "ASIA"),
+    (28, "AUSTRALIA", "Cummins keeps the captaincy", "AAP", "OCEANIA"),
+    (29, "ITALY", "Rail strike halts trains today", "Treniamo", "EUROPE"),
+    (30, "NAGA", "Naga votes on city status", "PNA", "ASIA"),
+    (31, "JAVA", "M4.6 quake off Java", "BMKG", "ASIA"),
+    (32, "CHILE", "M4.7 quake in northern Chile", "USGS", "AMERICAS"),
+    (33, "DELHI", "Delhi chokes: AQI 279", "CPCB", "ASIA"),
+    (34, "VISAYAS", "Grid on yellow alert", "NGCP", "ASIA"),
+    (35, "TASMANIA", "One Nation donors revealed", "ABC", "OCEANIA"),
     (36, "MELBOURNE", "T20 opener tonight", "cricket.com.au", "OCEANIA"),
 ]
 
@@ -286,10 +284,10 @@ NUMBERS = [("13", "DAY 13 \u00b7 COP31"), ("3", "MISSILES DOWNED"),
 
 # Bar region: hitungan dari 36 cerita KAMI (bukan angka rank 2 yang
 # dikutip loss report — angka itu total 32 = cerita rank 2).
-# FIX (B1): Asia 13, Americas 6, Europe 5, Middle East 5, Oceania 3,
-# Global 3, Africa 1 — lihat stories-21nov.md.
-REGION_BAR = [("EUROPE", 5), ("MIDDLE EAST", 5), ("AFRICA", 1),
-              ("ASIA", 13), ("AMERICAS", 6), ("OCEANIA", 3),
+# Asia 13, Americas 6, Europe 5, Middle East 4, Oceania 4, Global 3,
+# Africa 1 — lihat stories-21nov.md.
+REGION_BAR = [("EUROPE", 5), ("MIDDLE EAST", 4), ("AFRICA", 1),
+              ("ASIA", 13), ("AMERICAS", 6), ("OCEANIA", 4),
               ("WORLD", 3)]
 
 # Warna region: dipakai banner + segmen bar region + pin peta (satu
@@ -297,7 +295,6 @@ REGION_BAR = [("EUROPE", 5), ("MIDDLE EAST", 5), ("AFRICA", 1),
 REGION_COLORS = {
     "EUROPE": (31, 58, 95),
     "MIDDLE EAST": (176, 48, 38),
-    "MIDDLE_EAST_ALT": (140, 30, 60),
     "AFRICA": (140, 80, 25),
     "ASIA": (46, 110, 142),
     "AMERICAS": (30, 95, 75),
@@ -307,10 +304,7 @@ REGION_COLORS = {
 }
 # Varian AMERICAS dipakai bila dua panel AMERICAS bertetangga
 # (H3 vs kartu 7; kartu 7 vs kartu 12) — greedy di assign_banners.
-# FIX (B1): varian MIDDLE EAST dipakai kartu 11 (Hormuz) karena kartu 6
-# (uranium) juga MIDDLE EAST dan berbagi sisi vertikal dengannya.
-REGION_ALT = {"AMERICAS": "AMERICAS_ALT",
-              "MIDDLE EAST": "MIDDLE_EAST_ALT"}
+REGION_ALT = {"AMERICAS": "AMERICAS_ALT"}
 
 DECK = ("COP31 in overtime  \u00b7  Three missiles down over Riyadh  \u00b7  "
         "Peru quake 6.7  \u00b7  Kryvyi Rih double strike  \u00b7  "
@@ -319,13 +313,14 @@ DECK = ("COP31 in overtime  \u00b7  Three missiles down over Riyadh  \u00b7  "
 DATECHECK = ("Left out as Friday 20 Nov news: Kyiv bridges hit \u00b7 "
              "missile in Poland \u00b7 Wall Street correction \u00b7 UK\u2013EU "
              "deal \u00b7 Akvan landfall \u00b7 ICJ Myanmar ruling \u00b7 "
+             "Iran uranium \u00b7 Taiwan warning \u00b7 Shenzhen summit \u00b7 "
              "Anthropic IPO \u00b7 GTA VI launch. "
              "Not yet happened: BepiColombo (19:24 CET) \u00b7 ATP semis "
              "\u00b7 T20 opener.")
 
 SOURCES = ("Sources: Reuters \u00b7 AP \u00b7 AFP \u00b7 BBC \u00b7 USGS \u00b7 "
            "NASA \u00b7 Antara \u00b7 Yonhap \u00b7 ATP Tour \u00b7 ESA \u00b7 "
-           "IAEA \u00b7 Kyiv Independent \u00b7 NGCP \u00b7 BMKG")
+           "Kyiv Independent \u00b7 NGCP \u00b7 BMKG")
 
 # ------------------------------------------------------------------ peta
 # Outline benua DETAIL Natural Earth 110m land (Public Domain).
@@ -368,20 +363,19 @@ def load_land_polys():
 
 LAND_POLYS = load_land_polys()
 
-# lon/lat pin 1-13 (lead + feature). #6 uranium: Tehran (ibu kota Iran;
-# pin di-offset kode karena bertetangga Antalya/Riyadh — lihat offset_used).
+# lon/lat pin 1-13 (lead + feature). #6 BepiColombo: ESOC Darmstadt
+# (pusat kendali misi ESA) — tidak ada lokasi Bumi untuk Merkurius.
 # #8 Bitcoin: proxy New York (pasar AS; Nasdaq -5,3% Jumat) — Bitcoin
 # sendiri global, tidak punya lokasi; dicatat di improve_2026-11-21.md.
 # #12 Dragon: zona splashdown lepas pantai California.
-# #13 China-Jepang: Beijing (pihak yang menuntut).
 PLACES = {
     "Antalya": (30.7, 36.9), "Riyadh": (46.7, 24.7),
     "Junin": (-75.9, -10.9), "Kryvyi Rih": (33.4, 47.9),
-    "Davao": (125.6, 7.1), "Tehran": (44.4, 35.7),
+    "Davao": (125.6, 7.1), "Darmstadt": (8.65, 49.87),
     "Washington": (-77.0, 38.9), "New York": (-74.0, 40.7),
     "Wellington": (174.8, -41.3), "Las Vegas": (-115.1, 36.2),
     "Hormuz": (56.5, 27.0), "California Coast": (-122.0, 34.0),
-    "Beijing": (116.4, 39.9),
+    "Turin": (7.7, 45.1),
 }
 
 # ------------------------------------------------------------------ painters
@@ -550,34 +544,24 @@ def p_davao(w, h, bg):
     return im
 
 
-def p_uranium(w, h, bg):
-    """Kartu 6 (BARU, FIX): menara pendingin PLTN + uap + simbol atom
-    (fakta: Dewan IAEA menuntut data 440,9 kg uranium 60%, Kamis 19 Nov)."""
+def p_bepi(w, h, bg):
+    """Kartu 6: wahana BepiColombo + Merkurius."""
     im = Image.new("RGB", (w, h), bg)
     d = ImageDraw.Draw(im)
-    gy = int(h * 0.84)
-    d.rectangle([0, gy, w, h], fill=(90, 90, 90))
-    # dua menara pendingin (putih, outline navy)
-    for (tx0, tw) in [(int(w * 0.16), 34), (int(w * 0.50), 38)]:
-        top = int(h * 0.30)
-        d.polygon([(tx0, gy), (tx0 + 5, top), (tx0 + tw - 5, top),
-                   (tx0 + tw, gy)], fill=WHITE, outline=NAVY, width=1)
-        d.rectangle([tx0 + 2, top - 3, tx0 + tw - 2, top + 2], fill=WHITE,
-                    outline=NAVY, width=1)
-        # uap di atas menara
-        d.ellipse([tx0 + 8, top - 12, tx0 + 16, top - 6],
-                  fill=(235, 235, 230))
-        d.ellipse([tx0 + tw - 16, top - 14, tx0 + tw - 8, top - 8],
-                  fill=(235, 235, 230))
-    # simbol atom kecil di kanan: inti + 3 orbit
-    ax, ay = int(w * 0.86), int(h * 0.42)
-    d.ellipse([ax - 4, ay - 4, ax + 4, ay + 4], fill=GOLD_M,
+    for (sx, sy) in [(14, 6), (52, 10), (120, 5), (168, 8)]:
+        d.ellipse([sx, sy, sx + 2, sy + 2], fill=WHITE)
+    mx, my, mr = int(w * 0.72), int(h * 0.52), 15
+    d.ellipse([mx - mr, my - mr, mx + mr, my + mr], fill=(150, 140, 130),
               outline=NAVY, width=1)
-    for rx, ry in [(12, 5), (5, 12)]:
-        d.ellipse([ax - rx, ay - ry, ax + rx, ay + ry], outline=NAVY,
-                  width=1)
-    for (ex, ey) in [(ax + 12, ay), (ax - 5, ay + 12), (ax - 5, ay - 12)]:
-        d.ellipse([ex - 2, ey - 2, ex + 2, ey + 2], fill=RED_M)
+    d.ellipse([mx - 8, my - 5, mx - 2, my + 1], fill=(110, 100, 90))
+    d.ellipse([mx + 2, my + 4, mx + 7, my + 9], fill=(110, 100, 90))
+    cx, cy = int(w * 0.30), int(h * 0.50)
+    d.rectangle([cx - 12, cy - 9, cx + 12, cy + 9], fill=GOLD_M,
+                outline=NAVY, width=1)
+    d.rectangle([cx - 34, cy - 5, cx - 12, cy + 5], fill=NAVY)
+    d.rectangle([cx + 12, cy - 5, cx + 34, cy + 5], fill=NAVY)
+    d.line([(cx + 34, cy), (mx - mr - 2, my)], fill=GOLD_M, width=2)
+    d.ellipse([cx - 2, cy - 2, cx + 2, cy + 2], fill=RED_M)
     return im
 
 
@@ -724,57 +708,29 @@ def p_dragon(w, h, bg):
     return im
 
 
-def p_chinajapan(w, h, bg):
-    """Kartu 13 (BARU, FIX): bendera China + Jepang (3:2) + podium
-    (fakta: Beijing menuntut Tokyo koreksi pernyataan Taiwan, Jumat
-    20 Nov — Guo Jiakun, briefing FM)."""
+def p_tennis(w, h, bg):
+    """Kartu 13: bola tenis besar + garis lapangan."""
     im = Image.new("RGB", (w, h), bg)
     d = ImageDraw.Draw(im)
-    gy = int(h * 0.82)
-    d.rectangle([0, gy, w, h], fill=(90, 90, 90))
-    fy = int(h * 0.16)
-    fw, fh = 34, 22
-    # tiang bendera
-    for fx in (int(w * 0.14), int(w * 0.66)):
-        d.line([(fx, fy), (fx, gy)], fill=NAVY, width=2)
-    # bendera China (merah + 1 bintang besar + 4 kecil, kuning)
-    cx0 = int(w * 0.14)
-    d.rectangle([cx0, fy, cx0 + fw, fy + fh], fill=(222, 40, 30),
-                outline=NAVY, width=1)
-    sx, sy, r = cx0 + 8, fy + 8, 4
-    pts = []
-    for i in range(10):
-        ang = -90 + i * 36
-        rr = r if i % 2 == 0 else r * 0.45
-        import math
-        pts.append((sx + rr * math.cos(math.radians(ang)),
-                    sy + rr * math.sin(math.radians(ang))))
-    d.polygon(pts, fill=(255, 220, 60))
-    for (dx, dy) in [(20, 3), (25, 7), (25, 13), (20, 17)]:
-        d.ellipse([cx0 + dx - 1, fy + dy - 1, cx0 + dx + 1, fy + dy + 1],
-                  fill=(255, 220, 60))
-    # bendera Jepang (putih + lingkaran merah)
-    jx0 = int(w * 0.66)
-    d.rectangle([jx0, fy, jx0 + fw, fy + fh], fill=WHITE, outline=NAVY,
-                width=1)
-    d.ellipse([jx0 + 12, fy + 6, jx0 + 22, fy + 16], fill=(188, 0, 45))
-    # podium + 2 mikrofon di tengah bawah
-    px0, px1 = int(w * 0.42), int(w * 0.58)
-    d.rectangle([px0, int(h * 0.58), px1, gy], fill=NAVY)
-    d.rectangle([px0, int(h * 0.58), px1, int(h * 0.58) + 4],
-                fill=(200, 160, 60))
-    for mx in (px0 + 5, px1 - 5):
-        d.line([(mx, int(h * 0.58)), (mx, int(h * 0.58) - 8)], fill=NAVY,
-               width=1)
-        d.ellipse([mx - 2, int(h * 0.58) - 11, mx + 2,
-                   int(h * 0.58) - 7], fill=NAVY)
+    gy = int(h * 0.84)
+    d.rectangle([0, gy, w, h], fill=(60, 110, 70))
+    d.line([(0, int(h * 0.60)), (w, int(h * 0.60))], fill=WHITE, width=2)
+    cx, cy, r = int(w * 0.42), int(h * 0.50), 12
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(200, 220, 60),
+              outline=NAVY, width=1)
+    d.arc([cx - r, cy - r, cx + r, cy + r], 200, 340, fill=WHITE, width=2)
+    d.arc([cx - r, cy - r, cx + r, cy + r], 20, 160, fill=WHITE, width=2)
+    d.rectangle([int(w * 0.72), int(h * 0.30), int(w * 0.72) + 26,
+                 int(h * 0.30) + 18], fill=WHITE, outline=NAVY, width=1)
+    d.line([(int(w * 0.72), int(h * 0.30) + 9),
+            (int(w * 0.72) + 26, int(h * 0.30) + 9)], fill=NAVY, width=1)
     return im
 
 
-CARD_PAINTERS = {"kryvyi": p_kryvyi, "davao": p_davao, "uranium": p_uranium,
+CARD_PAINTERS = {"kryvyi": p_kryvyi, "davao": p_davao, "bepi": p_bepi,
                  "capitol": p_capitol, "bitcoin": p_bitcoin,
                  "cricket": p_cricket, "f1": p_f1, "drone": p_drone,
-                 "dragon": p_dragon, "chinajapan": p_chinajapan}
+                 "dragon": p_dragon, "tennis": p_tennis}
 HERO_PAINTERS = {"cop31": p_cop31, "riyadh": p_riyadh, "quake": p_quake}
 
 

@@ -1,12 +1,12 @@
-# news-image-20261121 (ni21) — 36 Cerita (34 Sabtu + 2 berlabel tanggal) 21 November 2026
+# news-image-20261121 (ni21) — 36 Cerita Sabtu 21 November 2026
 
 - Bounty: `news-image-20261121` — "Sum up 21 November's world news in one image". $100, top 50 (1: $20, 2: $12, 3: $6, 4–10: $2, 11–50: $1,20). Fee $0.
 - Buka Sab 21 Nov 07:00 WIB, deadline Sen 23 Nov 07:00 WIB. Final due 7 Des 2026.
 - Entri: PNG/JPEG ≤1 MiB, 1024×1024, deterministik (2x jalan, byte sama), tanpa network, repo GitHub publik dibuat SETELAH bounty buka + lisensi OSI, transkrip AI (bundle) wajib.
 - Juri AI pairwise, TIDAK punya news feed — menilai seperti editor foto teliti, dari apa yang gambar itu sendiri tunjukkan.
-- Aturan tanggal (KERAS): cerita harus terjadi ATAU pertama kali dilaporkan pada Sab 21 Nov 2026 di SETIDAKNYA SATU zona waktu. Yang pertama dilaporkan Jum 20 Nov atau lebih lama di SEMUA zona waktu = DITOLAK. **Pengecualian (Keputusan Kevin 20:28 WIB, FIX manual 21 Nov): 2 kartu berlabel tanggal eksplisit — #6 uranium Iran (Kamis 19 Nov, resolusi Dewan IAEA) + #13 China–Jepang Taiwan (Jumat 20 Nov, briefing FM) — masing-masing membawa label tanggal di kicker kartu (THU 19 NOV / FRI 20 NOV).**
+- Aturan tanggal (KERAS): cerita harus terjadi ATAU pertama kali dilaporkan pada Sab 21 Nov 2026 di SETIDAKNYA SATU zona waktu. Yang pertama dilaporkan Jum 20 Nov atau lebih lama di SEMUA zona waktu = DITOLAK.
 - Riset: 21 Nov 2026 ~12:07–13:45 WIB. Model: Muse Spark. Semua cerita di bawah terverifikasi dari sumber primer bertanggal (Reuters, AP, AFP, BBC, dll.) — bukan cuma headline agregator.
-- Hitungan region (36 cerita): Asia 13 · Americas 6 · Europe 5 · Middle East 5 · Oceania 3 · Global 3 · Africa 1.
+- Hitungan region (36 cerita): Asia 13 · Americas 6 · Europe 5 · Middle East 4 · Oceania 4 · Global 3 · Africa 1.
 
 ## LEAD (1–3)
 
@@ -42,11 +42,11 @@
 **Sumber + tanggal:** AP (via CAAP), TBS News, Davao News — 21 Nov 2026.
 **Bukti tanggal:** Diversi ~00:08 Sabtu waktu Davao; laporan AP terbit Sabtu.
 
-### 6. Iran uranium — Teheran / Wina (Middle East) — KARTU BERLABEL TANGGAL (Kamis 19 Nov)
-**Judul:** IAEA demands Iran uranium data
-**Ringkasan:** Dewan Gubernur IAEA (35 negara) mengadopsi resolusi Kamis 19 Nov menuntut Iran memberi "informasi tepat" soal stok uranium hampir-kelas-senjata dan memberi akses inspektor ke situs nuklir; 19 negara setuju, Rusia/China/Niger menentang, 12 abstain. IAEA kehilangan jejak stok 440,9 kg uranium yang diperkaya sampai 60% sejak serangan Israel–AS Juni 2025 (18 bulan tanpa verifikasi); pernyataan bersama AS–Inggris–Prancis–Jerman Kamis 19 Nov: "lost continuity of knowledge" atas stok yang dulu terverifikasi.
-**Sumber + tanggal:** AP (via Glance), Reuters, GOV.UK (Quad statement, 19 Nov 2026 14:26 UTC).
-**Bukti tanggal:** Resolusi diadopsi Kamis 19 Nov (AP: "urged Iran on Thursday"); pernyataan Quad disampaikan Kamis 19 Nov. Kartu membawa label kicker "THU 19 NOV" — tanggalnya eksplisit di gambar (Keputusan Kevin 20:28 WIB).
+### 6. BepiColombo — luar angkasa (Global)
+**Judul:** BepiColombo reaches Mercury tonight, 19:24 CET
+**Ringkasan:** Wahana ESA/JAXA menyalakan mesin pemasukan orbit tepat 19:24 CET Sabtu (18:24 UTC), pembakaran 37 menit, tangkapan lemah (weak capture); perjalanan 8 tahun, 6 miliar mil; wahana kedua dalam sejarah yang mengorbit Merkurius; sains mulai April 2027.
+**Sumber + tanggal:** ESA Operations (LinkedIn), Sky & Telescope, USA Today, Wikipedia — 21 Nov 2026.
+**Bukti tanggal:** Jadwal 19:24 CET Sabtu. WAJIB dibingkai "due tonight 19:24 CET" — JANGAN ditulis seolah sudah terjadi (rank 3 menulisnya sebagai sudah terjadi = salah).
 
 ### 7. Trump data-centre tax — Amerika Serikat (Americas)
 **Judul:** Trump: "tremendous tax" on data centres abroad
@@ -84,11 +84,11 @@
 **Sumber + tanggal:** NASA (blog 20 Nov + advisory diperbarui 19 Nov).
 **Bukti tanggal:** Jadwal splashdown Sabtu 16:55 EST; bingkai "today".
 
-### 13. China–Jepang Taiwan — Beijing (Asia) — KARTU BERLABEL TANGGAL (Jumat 20 Nov)
-**Judul:** China warns Japan on Taiwan
-**Ringkasan:** Juru bicara Kemlu China Guo Jiakun pada briefing reguler Jumat 20 Nov menuntut Jepang "segera mengoreksi kata-kata dan perbuatan yang salah" soal Taiwan — merespons pernyataan PM Sanae Takaichi (Nov 2025) bahwa Jepang bisa campur tangan militer bila China menyerang Taiwan, dan penolakan Xi Jinping bertemu formal Takaichi di KTT APEC Shenzhen (hanya jabat tangan 2×). Takaichi pulang Kamis 20 Nov menegaskan posisi Jepang "tidak berubah" dari Komunike Bersama 1972; Guo: mematuhi empat dokumen politik "bukan cuma kata-kata, tapi tindakan".
-**Sumber + tanggal:** Reuters (via Kayhan, 20 Nov 2026 22:15 +03:30), Sputnik (20 Nov 2026 06:51 EST), TV Asahi (20 Nov 2026).
-**Bukti tanggal:** Briefing Guo Jumat 20 Nov (Reuters: "China on Friday renewed its call"); Sputnik bertanggal 20 Nov 06:51 EST. Kartu membawa label kicker "FRI 20 NOV" — tanggalnya eksplisit di gambar (Keputusan Kevin 20:28 WIB).
+### 13. ATP Finals semis tonight — Italia (Europe)
+**Judul:** ATP Finals semis tonight: Alcaraz–Shelton, Zverev–Medvedev
+**Ringkasan:** Nitto ATP Finals, Inalpi Arena, Turin: Alcaraz vs Shelton tidak sebelum 14:30 CET; Zverev vs Medvedev tidak sebelum 20:30 CET; empat unggulan teratas di semifinal; Medvedev mengalahkan Tiafoe 6-3, 6-4 Jumat untuk lolos semifinal; Medvedev unggul H2H 14-8 atas Zverev.
+**Sumber + tanggal:** ATP Tour (jadwal + preview, 20 Nov 2026), Xinhua (via nampa.org) 21 Nov 2026.
+**Bukti tanggal:** Jadwal Sabtu; bingkai "due tonight" — pertandingan BELUM dimainkan.
 
 ## BRIEFS (14–36)
 
@@ -134,95 +134,95 @@
 **Sumber + tanggal:** BBC News (Robin Levinson-King / Cecilia Barría), terbit 21 Nov 2026.
 **Bukti tanggal:** Investigasi BBC bertanggal 21 Nov.
 
-### 21. CGTP march Lisbon today — Portugal (Europe)
+### 21. India hockey vs Korea tonight — India (Asia)
+**Judul:** India vs South Korea tonight in Bhopal
+**Ringkasan:** Women's Asian Champions Trophy, Bhopal: India vs Korea Selatan Sabtu 21 Nov 19:00 IST.
+**Sumber + tanggal:** Hockey India / newsage.in — 21 Nov 2026.
+**Bukti tanggal:** Jadwal Sabtu 19:00 IST. (India menang 4-1 atas Malaysia Kamis 19 Nov — DITOLAK sebagai cerita; hook Sabtu adalah jadwal pertandingan.)
+
+### 22. CGTP march Lisbon today — Portugal (Europe)
 **Judul:** CGTP marches in Lisbon today
 **Ringkasan:** CGTP berarak di Lisbon Sabtu 21 Nov, Saldanha → Restauradores, menuntut gaji lebih tinggi, pensiun, kesehatan, pendidikan, perumahan, Jaminan Sosial.
 **Sumber + tanggal:** downriver.pt, telcomia.com — 21 Nov 2026.
 **Bukti tanggal:** Arak-arakan Sabtu. (Mogok sektor publik itu sendiri Jumat 20 Nov — DITOLAK; hook Sabtu adalah arak-arakan.)
 
-### 22. Philippines pet cremation scam — Filipina (Asia)
+### 23. Philippines pet cremation scam — Filipina (Asia)
 **Judul:** Pet cremation scam: 170 dead pets dumped near Manila
 **Ringkasan:** Investigasi BBC (Gavin Butler), terbit 21 Nov 2026: ~170 hewan peliharaan mati ditemukan di 15 lokasi pembuangan dekat Manila (Bulacan); pemilik membayar kremasi, sisa jenazah dibuang; NBI mengajukan pengaduan terhadap 4 orang termasuk pemilik Ahjay Paws; Komisi Kepolisian Nasional menyelidiki polisi.
 **Sumber + tanggal:** BBC (via bbcbreakingnews.pages.dev / thegenevatimes.ch); KeNews 21 Nov 2026.
 **Bukti tanggal:** Investigasi BBC terbit 21 Nov ("4 hours ago" saat dicek).
 
-### 23. PLN six PPAs — Indonesia (Asia)
+### 24. PLN six PPAs — Indonesia (Asia)
 **Judul:** Indonesia's PLN signs six clean-power deals at COP31
 **Ringkasan:** Antara, Jakarta 21 Nov: PLN mengamankan enam perjanjian jual beli listrik (PPA) + dua letter of intent untuk energi baru-terbarukan di COP31 — hidro Redelong 18 MW, Pakkat-2 45 MW, Besai-2 20 MW, Salu Uro 95 MW; surya Timor-1 5 MW, Betun 0,6 MW, Sumbawa-Bima 10 MW; angin 70 + 60 MW di Sulawesi Selatan.
 **Sumber + tanggal:** Antara (English), "Jakarta, Nov. 21 — statement received here on Saturday".
 **Bukti tanggal:** Pernyataan PLN diterima Antara Sabtu; artikel bertanggal 21 Nov.
 
-### 24. Bangkok arsenic emergency meeting — Thailand (Asia)
+### 25. Bangkok arsenic emergency meeting — Thailand (Asia)
 **Judul:** Anutin calls emergency meeting on toxic rivers
 **Ringkasan:** PM Anutin Charnvirakul memimpin rapat darurat tingkat kabinet di Government House Sabtu untuk menaikkan kontaminasi logam berat di sungai Chiang Rai menjadi prioritas nasional, setelah mendapat janji dukungan teknis monitoring/pembersihan dari Presiden Xi Jinping di Shenzhen 20 Nov. Arsenik 30× batas aman di sungai Sai dan Kok, air keran dihentikan untuk 20.000+ rumah tangga; rencana enam poin.
 **Sumber + tanggal:** Chiang Rai Times (21 Nov), The Nation (Instagram, diposting 21 Nov).
 **Bukti tanggal:** Rapat darurat Sabtu; janji Xi Jumat 20 Nov. (Rencana enam poin itu sendiri diumumkan 16 Nov — hook Sabtu adalah rapat darurat + janji Xi.)
 
-### 25. SCO forum Saturday sessions — India (Asia)
+### 26. SCO forum Saturday sessions — India (Asia)
 **Judul:** Pakistani minister addresses SCO forum in Delhi
 **Ringkasan:** Forum Dialog Peradaban SCO, New Delhi (20–22 Nov); sesi tematik 21–22 Nov; Menteri Iklim Pakistan Musadik Malik berpidato di forum Sabtu — menteri federal Pakistan pertama di India sejak Mei 2023 (Bilawal Bhutto, Goa).
 **Sumber + tanggal:** ITDC India, Dainik Jagran, The News — 21 Nov 2026.
 **Bukti tanggal:** Sesi Sabtu 21 Nov; Malik dijadwalkan berpidato 21 Nov. (Kedatangan Malik Jumat 20 Nov — hook Sabtu adalah pidato/sesi.)
 
-### 26. Akvan remnants soak eastern India — India (Asia)
+### 27. Akvan remnants soak eastern India — India (Asia)
 **Judul:** Akvan's remnants bring heavy rain to eastern India
 **Ringkasan:** Prakiraan IMD untuk Sabtu 21 Nov: hujan lebat, petir, angin kencang 40–50 km/jam di Bihar, Jharkhand, Odisha, Bengal Barat, Assam/Meghalaya saat sisa Siklon Akvan (mendarat Jumat dekat Gopalpur, Odisha) bergerak ke darat; Kolkata tergenang Jumat; peringatan sampai 22 Nov.
 **Sumber + tanggal:** The Daily Jagran, Indian Witness, Madhyamam — 21 Nov 2026.
 **Bukti tanggal:** Prakiraan/hujan Sabtu 21 Nov. (Pendaratan Akvan sendiri Jumat — hook Sabtu adalah hujan sisa badai.)
 
-### 27. Cummins keeps captaincy — Australia (Oceania)
+### 28. Cummins keeps captaincy — Australia (Oceania)
 **Judul:** Cummins keeps the Australian captaincy
 **Ringkasan:** Dewan Cricket Australia bertemu Sabtu 21 Nov dan memberi dukungan bulat: Pat Cummins tetap kapten Tes (dan ODI) Australia meski ada klaim baru soal Sandpapergate (Khawaja/Bancroft); memimpin seri NZ mulai 9 Des di Perth; forum independen dibentuk untuk mendengar kesaksian.
 **Sumber + tanggal:** AAP, Particle News, The Daily Jagran — 21 Nov 2026.
 **Bukti tanggal:** Pernyataan CA dikeluarkan Sabtu; dewan bertemu Sabtu.
 
-### 28. Italy rail strike — Italia (Europe)
+### 29. Italy rail strike — Italia (Europe)
 **Judul:** Italy rail strike halts trains on Saturday
 **Ringkasan:** Mogok kereta nasional 21:00 Jumat 20 Nov → 20:00 Sabtu 21 Nov (CUB Trasporti/SGB/CAT); Trenitalia, Italo, Trenord terganggu; hanya kereta terjamin di jam 06:00–09:00 dan 18:00–21:00; plus mogok kontrol lalu lintas udara ENAV Sabtu 13:00–17:00.
 **Sumber + tanggal:** Treniamo (kalender resmi Kementerian Transportasi Italia), The Traveler, Hangout Bridges — 21 Nov 2026.
 **Bukti tanggal:** Mogok berjalan sepanjang Sabtu; gangguan terberat Sabtu.
 
-### 29. Naga votes on city status — Filipina (Asia)
+### 30. Naga votes on city status — Filipina (Asia)
 **Judul:** Naga votes on becoming a highly urbanized city
 **Ringkasan:** Plebisit Sabtu 21 Nov, pemungutan suara 05:00–15:00 (awal 05:00–07:00 untuk kelompok rentan), 119.259 pemilih terdaftar, 232 TPS berkelompok, 26 pusat pemungutan suara; meratifikasi Proklamasi No. 1267 yang mengubah Kota Naga menjadi Highly Urbanized City; COMELEC menargetkan partisipasi ~75%; Wali Kota Leni Robredo.
 **Sumber + tanggal:** The Chronicle (PNA), Street Journal MS, naga.gov.ph — 21 Nov 2026.
 **Bukti tanggal:** Plebisit berlangsung Sabtu 21 Nov.
 
-### 30. Java quake offshore — Indonesia (Asia)
+### 31. Java quake offshore — Indonesia (Asia)
 **Judul:** M4.6 quake off Java, felt in Jakarta area
 **Ringkasan:** Gempa M4.6, 67 km selatan Sukabumi, 17:50 UTC Jumat = 00:50 WIB Sabtu, kedalaman 17 km; juga M3.6 pukul 00:03 WIB 130 km barat daya Tasikmalaya; tidak ada laporan kerusakan/tsunami.
 **Sumber + tanggal:** BMKG (via Info Gempa Dunia), EarthquakeLive.org — 21 Nov 2026.
 **Bukti tanggal:** 00:50 WIB Sabtu (waktu lokal) — Sabtu di zona waktu Asia/Jakarta, sesuai aturan "Sabtu di setidaknya satu zona waktu".
 
-### 31. Chile quake north — Chile (Americas)
+### 32. Chile quake north — Chile (Americas)
 **Judul:** M4.7 quake in northern Chile
 **Ringkasan:** Gempa M4.7, 38 km timur laut Calama, Sabtu 21 Nov 01:24 UTC, kedalaman 120 km; tidak ada peringatan tsunami; getaran lemah.
 **Sumber + tanggal:** USGS (via Earthquake Today / Terremoto) — 21 Nov 2026, 01:24 UTC.
 **Bukti tanggal:** Waktu kejadian 01:24 UTC 21 Nov; USGS reviewed.
 
-### 32. Delhi chokes — India (Asia)
+### 33. Delhi chokes — India (Asia)
 **Judul:** Delhi chokes: AQI 279, very unhealthy
 **Ringkasan:** Kualitas udara Delhi Sabtu pagi: AQI 279 (CPCB, pukul 07:00; Sangat Tidak Sehat), polutan utama PM2.5; kabut, 22°C. (Angka 286 dari weather.com tidak terverifikasi ulang saat crosscheck — diganti 279 CPCB.)
 **Sumber + tanggal:** CPCB (07:00), Sabtu 21 Nov 2026.
 **Bukti tanggal:** Pembacaan CPCB Sabtu pagi 21 Nov (07:00); IANS 327 pukul 08:20, weather.com 181 — angka 286 tidak muncul di sumber mana pun.
 
-### 33. Visayas grid yellow alert — Filipina (Asia)
+### 34. Visayas grid yellow alert — Filipina (Asia)
 **Judul:** Visayas grid on yellow alert again today
 **Ringkasan:** Advisory NGCP per 08:00 Sabtu 21 Nov: yellow alert 17:00–20:00 Sabtu; kapasitas tersedia 2.543 MW vs puncak permintaan 2.427 MW; 675,7 MW tidak tersedia (TVI 2 mati tak terjadwal, PCPC + KSPC 2 mati terjadwal, TVI 1 derated); Jumat sempat red alert 17:00–18:00.
 **Sumber + tanggal:** NGCP (via Energy News PH / GMA News) — 21 Nov 2026.
 **Bukti tanggal:** Advisory NGCP bertanggal 21 Nov 08:00; yellow alert berlaku Sabtu sore.
 
-### 34. ATP Finals semis tonight — Italia (Europe)
-**Judul:** ATP Finals semis tonight: Alcaraz–Shelton, Zverev–Medvedev
-**Ringkasan:** Nitto ATP Finals, Inalpi Arena, Turin: Alcaraz vs Shelton tidak sebelum 14:30 CET; Zverev vs Medvedev tidak sebelum 20:30 CET; Medvedev mengalahkan Tiafoe 6-3, 6-4 Jumat untuk lolos semifinal.
-**Sumber + tanggal:** ATP Tour (jadwal + preview, 20 Nov 2026), Xinhua (via nampa.org) 21 Nov 2026.
-**Bukti tanggal:** Jadwal Sabtu; bingkai "due tonight" — pertandingan BELUM dimainkan.
-
-### 35. BepiColombo — luar angkasa (Global)
-**Judul:** BepiColombo reaches Mercury tonight, 19:24 CET
-**Ringkasan:** Wahana ESA/JAXA menyalakan mesin pemasukan orbit tepat 19:24 CET Sabtu (18:24 UTC), pembakaran 37 menit; perjalanan 8 tahun, 6 miliar mil; wahana kedua dalam sejarah yang mengorbit Merkurius.
-**Sumber + tanggal:** ESA Operations (LinkedIn), Sky & Telescope, USA Today, Wikipedia — 21 Nov 2026.
-**Bukti tanggal:** Jadwal 19:24 CET Sabtu. WAJIB dibingkai "due tonight 19:24 CET" — JANGAN ditulis seolah sudah terjadi.
+### 35. Tasmania One Nation donors — Australia (Oceania)
+**Judul:** One Nation Tasmania's $70,000 donors revealed
+**Ringkasan:** ABC News, 21 Nov: One Nation Tasmania menerima $25.000 dari Huon Aquaculture (JBS Australia) dan $45.000 dari firma lobi The Advisory (klien termasuk pembangun stadion Macquarie Point BESIX Watpac); partai di 23% pada jajak pendapat EMRS terbaru.
+**Sumber + tanggal:** ABC News (via Threads/Facebook, 21 Nov 2026); Zot News.
+**Bukti tanggal:** Artikel ABC bertanggal 21 Nov 2026 (donasi itu sendiri tercatat 11 Nov — beritanya adalah pengungkapan/laporan ABC hari Sabtu).
 
 ### 36. AUS–ENG T20 opener tonight — Australia (Oceania)
 **Judul:** Australia v England T20 opener tonight at the MCG
@@ -239,7 +239,7 @@
 6. **$56,814** — Bitcoin early Saturday
 
 ## DATE CHECK — yang TIDAK dimasukkan (berita Jumat/Kamis/lama)
-- Jumat 20 Nov: serangan Rusia ke Kyiv + rudal jatuh di Polandia; Wall Street masuk koreksi; kesepakatan UK–EU Brexit reset; pendaratan Siklon Akvan; sidang/putusan ICJ Myanmar (Kamis 19 Nov); IPO Anthropic $83 (Kamis); peluncuran GTA VI (Kamis); penjualan Van Gogh $190,4 juta; pemungutan suara Senat AS 48–51 soal perang Iran; darurat Tonga (brief ni20 Jumat); biaya perang Iran $48,3 miliar Pentagon (brief ni20 Jumat); sidang Thomas Markle (brief ni20 Jumat); putusan LA/Palisades fire; eksekusi Texas 63 menit (Kamis 19 Nov); kesepakatan Roundup $7,25 miliar (Jumat); pemungutan suara kas Taiwan NT$20.000 (Jumat); kunjungan Kim ke pabrik (Kamis); peringatan EU "fossil summit" + surat Panama (Kamis 19 Nov — bagian dari cerita COP31, bukan brief terpisah); UNICEF korban anak Ukraina (Jumat); hakim blokir triumphal arch Trump (Jumat); protes pelajar Berlin (Jumat); forum Halifax (Jumat); peringatan ISIS-K (Kamis); pemogokan umum CGIL Italia (Jumat — mogok kereta Sabtu terpisah).
+- Jumat 20 Nov: serangan Rusia ke Kyiv + rudal jatuh di Polandia; Wall Street masuk koreksi; kesepakatan UK–EU Brexit reset; pendaratan Siklon Akvan; sidang/putusan ICJ Myanmar (Kamis 19 Nov); KTT Shenzhen Trump–Xi–Putin (Kamis); IPO Anthropic $83 (Kamis); peluncuran GTA VI (Kamis); penjualan Van Gogh $190,4 juta; pemungutan suara Senat AS 48–51 soal perang Iran; darurat Tonga (brief ni20 Jumat); biaya perang Iran $48,3 miliar Pentagon (brief ni20 Jumat); sidang Thomas Markle (brief ni20 Jumat); putusan LA/Palisades fire; eksekusi Texas 63 menit (Kamis 19 Nov); kesepakatan Roundup $7,25 miliar (Jumat); pemungutan suara kas Taiwan NT$20.000 (Jumat); kunjungan Kim ke pabrik (Kamis); peringatan EU "fossil summit" + surat Panama (Kamis 19 Nov — bagian dari cerita COP31, bukan brief terpisah); UNICEF korban anak Ukraina (Jumat); hakim blokir triumphal arch Trump (Jumat); protes pelajar Berlin (Jumat); forum Halifax (Jumat); peringatan ISIS-K (Kamis); pemogokan umum CGIL Italia (Jumat — mogok kereta Sabtu terpisah).
 - Lebih lama: Starc 7/58 Ashes (Nov 2025); Voyager 1 satu hari-cahaya (18 Nov); kematian Fiona si kuda nil (Kamis 19 Nov).
 
 ## ATM — TOP 3 LIVE (leaderboard diambil 21 Nov 12:07 WIB; 2.978 entri saat itu; 3.269 submission pukul 12:06 WIB)
@@ -267,15 +267,15 @@ Semua top-3 memakai keluarga template yang SAMA (kertas krem, masthead serif hit
 - **Yang membuat rank 3 menang:** peta halftone bertitik yang khas (pembeda visual), angka strip "0 climate deal agreed" yang berani, DATE CHECK dengan daftar silang (✗) yang panjang dan jujur, 36 cerita.
 
 ### Kesimpulan ATM — pembeda kita
-1. **Kemurnian tanggal:** rank 2 punya ~8 cerita Jumat, rank 3 ~6 cerita basi/salah tanggal, rank 1 ~9 brief Jumat. Daftar kita 34 Sabtu terverifikasi dari sumber primer + 2 kartu berlabel tanggal eksplisit (uranium Kamis, China–Jepang Jumat) — ini pembeda terbesar dan paling terukur.
+1. **Kemurnian tanggal:** rank 2 punya ~8 cerita Jumat, rank 3 ~6 cerita basi/salah tanggal, rank 1 ~9 brief Jumat. Daftar kita 36/36 terverifikasi Sabtu dari sumber primer — ini pembeda terbesar dan paling terukur.
 2. **Akurasi angka:** "3 missiles" (bukan 5); BepiColombo "due tonight 19:24 CET" (bukan sudah terjadi); Bitcoin $56.814 Sabtu pagi (bukan $58.983 Jumat).
-3. **Cerita Sabtu segar yang top-3 lewatkan:** plebisit Naga, gempa Jawa + Chile, yellow alert Visayas, T20 MCG malam ini, PPA PLN, rapat darurat arsenik Bangkok, investigasi BBC $811 juta, penipuan kremasi hewan Filipina, AQI Delhi 279 (CPCB).
+3. **Cerita Sabtu segar yang top-3 lewatkan:** plebisit Naga, gempa Jawa + Chile, yellow alert Visayas, donor One Nation Tasmania, T20 MCG malam ini, PPA PLN, rapat darurat arsenik Bangkok, investigasi BBC $811 juta, penipuan kremasi hewan Filipina, AQI Delhi 279 (CPCB).
 4. **Formula yang menang sudah jelas:** keluarga template (masthead + deck + strip angka + 3 hero + 10 kartu + peta + briefs + DATE CHECK). Jangan menyimpang dari keluarga ini — bedakan lewat isi, eksekusi ilustrasi, dan twist layout di dalamnya.
 5. **Bar paid place:** belum terbentuk untuk ni21 (dev masih provisional; rank 50 akan muncul saat lebih banyak entri dinilai). Pola ni19/ni20: bar rank-50 ≈ 987–990. Target realistis: dev ≥ 990 untuk masuk top 50; ≥ 991,9 untuk menyaingi rank 1 saat ini. (ESTIMASI dari pola ni19/ni20 — bukan janji.)
 
 ## CERITA DITOLAK (verifikasi tanggal gagal — JANGAN dipakai)
 - Wawancara Zelensky NBC (jembatan Crimea) — wawancara 20 Nov, Jumat.
-- Stok uranium Iran — DIPAKAI sebagai kartu #6 (FIX manual 21 Nov): resolusi Dewan IAEA Kamis 19 Nov (19 negara setuju) menuntut Iran beri data 440,9 kg uranium 60%; label kicker THU 19 NOV. (Pernyataan Rezaei 11 Nov tetap ditolak.)
+- Stok uranium Iran — pernyataan bersama Dewan IAEA Kamis 19 Nov; pernyataan Rezaei 11 Nov.
 - Youth march Eropa 400 kota — Jumat 20 Nov (Reuters 20 Nov, 25 negara).
 - Vonis LA/Palisades fire (Rinderknecht bersalah) — Jumat 20 Nov.
 - Kematian measles pertama AS 2026 (Virginia) — diumumkan Jumat 20 Nov; framing "kematian measles pertama AS" salah (Virginia pertama sejak 1978).
@@ -303,7 +303,7 @@ Semua top-3 memakai keluarga template yang SAMA (kertas krem, masthead serif hit
 - Pelanggaran pihak ketiga JPMorgan/Visa/Mastercard — JPMorgan Kamis 19 Nov, Mastercard Jumat 20 Nov.
 - Mogok sektor publik Portugal — Jumat 20 Nov. (Hanya arak-arakan CGTP Sabtu yang dipakai.)
 - Starc 7/58 Ashes Perth — November 2025 (setahun lalu).
-- Briefing FM China–Jepang soal Taiwan — DIPAKAI sebagai kartu #13 (FIX manual 21 Nov): Guo Jiakun menuntut Jepang koreksi pernyataan Taiwan Takaichi, Jumat 20 Nov waktu Beijing; label kicker FRI 20 NOV.
+- Briefing FM China–Jepang soal Taiwan — Jumat 20 Nov waktu Beijing (Jumat di semua zona waktu).
 - Kesepakatan reset Brexit UK–EU — ditandatangani Jumat 20 Nov Brussels.
 - Kapal Bayelsa Nigeria — tenggelam Jumat 20 Nov ~10:00 GMT; korban lebih tinggi (~30 tewas) BELUM terverifikasi.
 - Serangan Gaza bunuh 6 — Jumat 20 Nov (AFP).
