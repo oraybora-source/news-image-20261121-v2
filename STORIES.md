@@ -6,7 +6,7 @@
 - Juri AI pairwise, TIDAK punya news feed — menilai seperti editor foto teliti, dari apa yang gambar itu sendiri tunjukkan.
 - Aturan tanggal (KERAS): cerita harus terjadi ATAU pertama kali dilaporkan pada Sab 21 Nov 2026 di SETIDAKNYA SATU zona waktu. Yang pertama dilaporkan Jum 20 Nov atau lebih lama di SEMUA zona waktu = DITOLAK.
 - Riset: 21 Nov 2026 ~12:07–13:45 WIB. Model: Muse Spark. Semua cerita di bawah terverifikasi dari sumber primer bertanggal (Reuters, AP, AFP, BBC, dll.) — bukan cuma headline agregator.
-- Hitungan region (35 cerita): Asia 12 · Americas 6 · Europe 5 · Middle East 4 · Oceania 4 · Global 3 · Africa 1.
+- Hitungan region (35 cerita, improve PUTARAN 1, 22 Nov 2026): Asia 11 · Americas 8 · Europe 5 · Middle East 5 · Oceania 3 · Global 2 · Africa 1. (Sebelumnya: Asia 12 · Americas 6 · Europe 5 · Middle East 4 · Oceania 4 · Global 3 · Africa 1 — BepiColombo/GLOBAL, ATP/EUROPE, T20/OCEANIA, Akvan/ASIA keluar; El Chapo/AMERICAS, kapal Rusia/EUROPE, Bolsonaro/AMERICAS, Gaza/MIDDLE EAST masuk.)
 
 ## LEAD (1–3)
 
@@ -42,11 +42,11 @@
 **Sumber + tanggal:** AP (via CAAP), TBS News, Davao News — 21 Nov 2026.
 **Bukti tanggal:** Diversi ~00:08 Sabtu waktu Davao; laporan AP terbit Sabtu.
 
-### 6. BepiColombo — luar angkasa (Global)
-**Judul:** BepiColombo reaches Mercury tonight, 19:24 CET
-**Ringkasan:** Wahana ESA/JAXA menyalakan mesin pemasukan orbit tepat 19:24 CET Sabtu (18:24 UTC), pembakaran 37 menit, tangkapan lemah (weak capture); perjalanan 8 tahun, 6 miliar mil; wahana kedua dalam sejarah yang mengorbit Merkurius; sains mulai April 2027.
-**Sumber + tanggal:** ESA Operations (LinkedIn), Sky & Telescope, USA Today, Wikipedia — 21 Nov 2026.
-**Bukti tanggal:** Jadwal 19:24 CET Sabtu. WAJIB dibingkai "due tonight 19:24 CET" — JANGAN ditulis seolah sudah terjadi (rank 3 menulisnya sebagai sudah terjadi = salah).
+### 6. El Chapo Isidro captured — Meksiko (Americas) [BARU, improve PUTARAN 1]
+**Judul:** Mexico captures 'El Chapo Isidro'
+**Ringkasan:** Militer Meksiko menangkap Fausto Isidro Meza Flores ("El Chapo Isidro") + 2 pemimpin organisasinya dalam operasi besar di Sinaloa Jumat malam; kepala keamanan Meksiko mengumumkannya Sabtu pagi. Salah satu buronan top 10 FBI; pemimpin kartel Beltran Leyva (bersekutu dengan faksi Los Mayos dari Kartel Sinaloa); selama 20+ tahun menyelundupkan heroin, metamfetamin, kokain, ganja ke AS. Operasi memicu kekerasan semalam di Sinaloa (baku tembak + blokade jalan dibakar). Penangkapan ini bagian dari rentetan penangkapan/kematian gembong di bawah tekanan Washington (Trump berulang kali mengancam aksi militer sepihak di Meksiko).
+**Sumber + tanggal:** Reuters, 21 Nov 2026 (pengumuman Sabtu pagi).
+**Bukti tanggal:** Penangkapan Jumat malam, PERTAMA DILAPORKAN Sabtu pagi — hook Sabtu adalah pengumuman pertama (sesuai aturan: terjadi ATAU pertama dilaporkan Sabtu). Jangan tulis seolah penangkapannya terjadi Sabtu siang.
 
 ### 7. Trump data-centre tax — Amerika Serikat (Americas)
 **Judul:** Trump: "tremendous tax" on data centres abroad
@@ -78,17 +78,17 @@
 **Sumber + tanggal:** PressTV 21 Nov 2026, IRIB (via corticorp).
 **Bukti tanggal:** Pengumuman IRGC Sabtu 03:03 GMT. JANGAN dicampur dengan klaim MQ-9 tentara Iran yang terpisah tanggal 20 Nov.
 
-### 12. SpaceX Dragon splashdown today — Amerika Serikat (Americas)
-**Judul:** SpaceX Dragon splashes down today off California
-**Ringkasan:** Dragon kargo tak berawak NASA CRS-35 lepas dari ISS Jumat 12:05 EST; pendaratan di laut lepas pantai California ditargetkan ~16:55 EST (13:55 PST) Sabtu 21 Nov; muatan >6.300 lb termasuk konstruksi pembuluh darah hasil bioprinting 3D, organoid tumor beku, sistem pencahayaan (3+ tahun di orbit).
-**Sumber + tanggal:** NASA (blog 20 Nov + advisory diperbarui 19 Nov).
-**Bukti tanggal:** Jadwal splashdown Sabtu 16:55 EST; bingkai "today".
+### 12. SpaceX Dragon splashdown — Amerika Serikat (Americas) [DIUBAH, improve PUTARAN 1: past tense terkonfirmasi]
+**Judul:** SpaceX Dragon splashes down off California
+**Ringkasan:** Dragon kargo tak berawak NASA CRS-35 (lepas dari ISS Jumat 12:05 EST) MENDARAT di Pasifik dekat Los Angeles Sabtu 2:03 p.m. PST (5:03 p.m. EST) — terkonfirmasi NASA; misi resupply komersial ke-35 ke ISS selesai; muatan riset kembali ke Bumi (pembuluh darah bioprinting 3D, organoid tumor beku, sampel mikroba, spacesuit, sistem pencahayaan 3+ tahun di orbit).
+**Sumber + tanggal:** NASA, blog "Dragon Returns to Earth Packed With Science and Cargo", 21 Nov 2026 17:10 ET; SpaceX (X, 2:04 p.m. Sabtu).
+**Bukti tanggal:** Splashdown TERJADI Sabtu 2:03 p.m. PST — bukan lagi jadwal (dulu "16:55 EST" = target). Gambar baru digambar setelah splashdown terjadi, jadi past tense jujur.
 
-### 13. ATP Finals semis tonight — Italia (Europe)
-**Judul:** ATP Finals semis tonight: Alcaraz–Shelton, Zverev–Medvedev
-**Ringkasan:** Nitto ATP Finals, Inalpi Arena, Turin: Alcaraz vs Shelton tidak sebelum 14:30 CET; Zverev vs Medvedev tidak sebelum 20:30 CET; empat unggulan teratas di semifinal; Medvedev mengalahkan Tiafoe 6-3, 6-4 Jumat untuk lolos semifinal; Medvedev unggul H2H 14-8 atas Zverev.
-**Sumber + tanggal:** ATP Tour (jadwal + preview, 20 Nov 2026), Xinhua (via nampa.org) 21 Nov 2026.
-**Bukti tanggal:** Jadwal Sabtu; bingkai "due tonight" — pertandingan BELUM dimainkan.
+### 13. Russian cargo ship hit by drones — Teluk Finlandia (Europe) [BARU, improve PUTARAN 1]
+**Judul:** Russian cargo ship hit by drones
+**Ringkasan:** Pejabat Rusia Sabtu: kapal kargo tujuan Kaliningrad (eksklave Rusia di Baltik) diserang 2 drone di perairan netral Teluk Finlandia, 3 mil laut dari perbatasan Rusia; awak dievakuasi, kerusakan dinilai; Finlandia: kapal terbakar dan hanyut dari perairan internasional ke perairan teritorial Finlandia; Penjaga Perbatasan Finlandia menyiapkan operasi penyelamatan bersama otoritas lain; gubernur Leningrad: 80 drone ditembak jatuh di wilayah itu, peringatan ancaman drone dicabut; gubernur Kaliningrad: insiden tidak mengancam pasokan.
+**Sumber + tanggal:** Reuters, 21 Nov 2026.
+**Bukti tanggal:** Pernyataan pejabat Rusia + Finlandia Sabtu 21 Nov; serangan terjadi Sabtu (bukan Jumat).
 
 ## BRIEFS (14–35)
 
@@ -164,11 +164,12 @@
 **Sumber + tanggal:** ITDC India, Dainik Jagran, The News — 21 Nov 2026.
 **Bukti tanggal:** Sesi Sabtu 21 Nov; Malik dijadwalkan berpidato 21 Nov. (Kedatangan Malik Jumat 20 Nov — hook Sabtu adalah pidato/sesi.)
 
-### 26. Akvan remnants soak eastern India — India (Asia)
-**Judul:** Akvan's remnants bring heavy rain to eastern India
-**Ringkasan:** Prakiraan IMD untuk Sabtu 21 Nov: hujan lebat, petir, angin kencang 40–50 km/jam di Bihar, Jharkhand, Odisha, Bengal Barat, Assam/Meghalaya saat sisa Siklon Akvan (mendarat Jumat dekat Gopalpur, Odisha) bergerak ke darat; Kolkata tergenang Jumat; peringatan sampai 22 Nov.
-**Sumber + tanggal:** The Daily Jagran, Indian Witness, Madhyamam — 21 Nov 2026.
-**Bukti tanggal:** Prakiraan/hujan Sabtu 21 Nov. (Pendaratan Akvan sendiri Jumat — hook Sabtu adalah hujan sisa badai.)
+### 26. Gaza aid vehicle strike — Gaza (Middle East) [BARU, improve PUTARAN 1; menggantikan hujan sisa Akvan]
+**Judul:** Strike kills 3 in aid vehicle
+**Ringkasan:** Serangan Israel Sabtu membunuh 3 warga Palestina di kendaraan yang membawa kertas + makanan untuk World Central Kitchen di Gaza City, menurut Kemenkes Gaza + saksi mata; kendaraan hendak berhenti membagikan makanan/minuman ke anak-anak saat dihantam rudal; makanan nasi matang berserakan, kendaraan sebagian berlumur darah korban. Militer Israel: beberapa operatif militan jadi target di area itu, tanpa rincian soal kendaraan bantuan; WCK belum berkomentar. (Konteks: gencatan senjata Okt 2025 menghentikan pertempuran besar tapi tidak menghentikan serangan Israel; ≥1.600 warga Palestina + 5 tentara Israel tewas sejak itu.)
+**Sumber + tanggal:** Reuters, 21 Nov 2026.
+**Bukti tanggal:** Serangan terjadi Sabtu 21 Nov (saksi Reuters di lokasi). Atribusi dijaga: klaim korban dari Kemenkes Gaza + saksi; klaim target dari IDF.
+**Catatan:** Hujan sisa Akvan (brief lama #26, terverifikasi Sabtu) dikeluarkan di improve PUTARAN 1 untuk penyeimbangan region (Asia 12 → 11), BUKAN karena tanggal — ceritanya tetap valid, tersedia sebagai cadangan.
 
 ### 27. Cummins keeps captaincy — Australia (Oceania)
 **Judul:** Cummins keeps the Australian captaincy
@@ -218,11 +219,11 @@
 **Sumber + tanggal:** ABC News (via Threads/Facebook, 21 Nov 2026); Zot News.
 **Bukti tanggal:** Artikel ABC bertanggal 21 Nov 2026 (donasi itu sendiri tercatat 11 Nov — beritanya adalah pengungkapan/laporan ABC hari Sabtu).
 
-### 35. AUS–ENG T20 opener tonight — Australia (Oceania)
-**Judul:** Australia v England T20 opener tonight at the MCG
-**Ringkasan:** T20I ke-1, MCG, Sabtu 21 Nov 19:15 AEDT; seri lima pertandingan; Inggris memenangi seri ODI 2-1 tiga hari lalu; Sam Harper debut untuk Australia; Australia pincang cedera.
-**Sumber + tanggal:** cricket.com.au, CricFacts, MCC — 21 Nov 2026.
-**Bukti tanggal:** Jadwal Sabtu 19:15 AEDT; bingkai "tonight" — pertandingan BELUM dimainkan.
+### 35. Bolsonaro taken to ICU — Brasil (Americas) [BARU, improve PUTARAN 1]
+**Judul:** Bolsonaro taken to ICU
+**Ringkasan:** Eks-Presiden Brasil Jair Bolsonaro masuk ICU RS DF Star, Brasilia, Sabtu (pernyataan RS): obstruksi akut di abdomen (didiagnosis Jumat), diobati agar tetap terhidrasi + dipasang selang lambung; kondisi stabil secara klinis + sadar, belum ada perkiraan keluar RS. Bolsonaro menjalani hukuman 27 tahun penjara sejak tahun lalu (merencanakan kudeta setelah kalah pemilu 2022 dari Lula); riwayat rawat inap/operasi terkait penikaman abdomen saat kampanye 2018.
+**Sumber + tanggal:** Reuters, 21 Nov 2026 19:03 UTC (pernyataan RS DF Star, Sabtu).
+**Bukti tanggal:** Masuk ICU Sabtu 21 Nov (pernyataan RS Sabtu). Diagnosis Jumat — hook Sabtu adalah masuk ICU-nya.
 
 ## STRIP ANGKA (6 angka, untuk sketsa)
 1. **13** — Day 13, COP31 overtime (hari ke-13 COP31)
@@ -233,6 +234,8 @@
 6. **$56,814** — Bitcoin early Saturday
 
 ## DATE CHECK — yang TIDAK dimasukkan (berita Jumat/Kamis/lama)
+
+**Improve PUTARAN 1 (22 Nov 2026):** BepiColombo (19:24 CET), ATP semis, dan T20 opener KELUAR SEPENUHNYA dari gambar — tidak lagi ditampilkan sebagai feature/brief dengan caveat "not yet happened". DATE CHECK gambar menulis ketiganya di "Not shown: ... — scheduled, not yet happened when drawn" (event terjadwal Sabtu malam, belum terjadi saat edisi ini disusun). Alasan: why_we_lost_2.md Temuan 2 — juri menghukum kontradiksi "ditampilkan sebagai berita + ditulis belum terjadi" paling keras; lawan yang MENGELUARKAN BepiColombo dipuji. Hujan sisa Akvan dikeluarkan dari brief karena penyeimbangan region (bukan tanggal).
 - Jumat 20 Nov: serangan Rusia ke Kyiv + rudal jatuh di Polandia; Wall Street masuk koreksi; kesepakatan UK–EU Brexit reset; pendaratan Siklon Akvan; sidang/putusan ICJ Myanmar (Kamis 19 Nov); KTT Shenzhen Trump–Xi–Putin (Kamis); IPO Anthropic $83 (Kamis); peluncuran GTA VI (Kamis); penjualan Van Gogh $190,4 juta; pemungutan suara Senat AS 48–51 soal perang Iran; darurat Tonga (brief ni20 Jumat); biaya perang Iran $48,3 miliar Pentagon (brief ni20 Jumat); sidang Thomas Markle (brief ni20 Jumat); putusan LA/Palisades fire; eksekusi Texas 63 menit (Kamis 19 Nov); kesepakatan Roundup $7,25 miliar (Jumat); pemungutan suara kas Taiwan NT$20.000 (Jumat); kunjungan Kim ke pabrik (Kamis); peringatan EU "fossil summit" + surat Panama (Kamis 19 Nov — bagian dari cerita COP31, bukan brief terpisah); UNICEF korban anak Ukraina (Jumat); hakim blokir triumphal arch Trump (Jumat); protes pelajar Berlin (Jumat); forum Halifax (Jumat); peringatan ISIS-K (Kamis); pemogokan umum CGIL Italia (Jumat — mogok kereta Sabtu terpisah).
 - Lebih lama: Starc 7/58 Ashes (Nov 2025); Voyager 1 satu hari-cahaya (18 Nov); kematian Fiona si kuda nil (Kamis 19 Nov).
 
@@ -268,6 +271,9 @@ Semua top-3 memakai keluarga template yang SAMA (kertas krem, masthead serif hit
 5. **Bar paid place:** belum terbentuk untuk ni21 (dev masih provisional; rank 50 akan muncul saat lebih banyak entri dinilai). Pola ni19/ni20: bar rank-50 ≈ 987–990. Target realistis: dev ≥ 990 untuk masuk top 50; ≥ 991,9 untuk menyaingi rank 1 saat ini. (ESTIMASI dari pola ni19/ni20 — bukan janji.)
 
 ## CERITA DITOLAK (verifikasi tanggal gagal — JANGAN dipakai)
+- BepiColombo orbit insertion (19:24 CET Sabtu) — DIKELUARKAN improve PUTARAN 1: event terjadwal Sabtu malam, belum terjadi saat edisi disusun; menampilkan + caveat dihukum juri (why_we_lost_2.md Temuan 2). Jangan tampilkan.
+- ATP Finals semis (Sabtu malam, Turin) — DIKELUARKAN improve PUTARAN 1, alasan sama.
+- T20 opener AUS–ENG (Sabtu 19:15 AEDT, MCG) — DIKELUARKAN improve PUTARAN 1, alasan sama.
 - Wawancara Zelensky NBC (jembatan Crimea) — wawancara 20 Nov, Jumat.
 - Stok uranium Iran — pernyataan bersama Dewan IAEA Kamis 19 Nov; pernyataan Rezaei 11 Nov.
 - Youth march Eropa 400 kota — Jumat 20 Nov (Reuters 20 Nov, 25 negara).

@@ -74,10 +74,28 @@ Perubahan vs V1 (hanya 5 CHANGES FOR IMPROVE dari loss_report_a1.md):
 +   DC_BOX y1 942->938 (tinggi 54px, gap 2px ke kotak di atas; y2 +
 +   Sources TETAP).
 
++15. Improve PUTARAN 1 (pack v12, 22 Nov, dari why_we_lost_2.md):
++   (1) BepiColombo #6, ATP semis #13, T20 opener (brief #35) KELUAR
++   SEPENUHNYA — diganti cerita Sabtu yang sudah terjadi + terverifikasi:
++   penangkapan "El Chapo Isidro" (Reuters, diumumkan Sabtu pagi),
++   kapal kargo Rusia diserang drone di Teluk Finlandia (Reuters Sabtu),
++   Bolsonaro masuk ICU (Reuters Sabtu 19:03 UTC); brief #26 Akvan
++   diganti serangan Gaza ke kendaraan bantuan (Reuters Sabtu).
++   Dragon #12 jadi past tense terkonfirmasi (NASA: splashdown
++   2:03 p.m. PST Sabtu). (2) Tag status per kartu (CONFIRMED /
++   OFFICIAL / REPORTED / CLAIM) di chip sumber + legenda
++   "HOW WE CHECKED" di DATE CHECK. (3) Banner hype dinetralkan:
++   "TREMENDOUS TAX" -> "AI TAX PLAN", "MQ-9 DOWN" -> "IRAN: MQ-9 DOWN".
++   (4) Tanpa font dikecilkan. (5) Asia 12 -> 11; region akhir
++   EUROPE 5 / MIDDLE EAST 5 / AFRICA 1 / ASIA 11 / AMERICAS 8 /
++   OCEANIA 3 / WORLD 2. Bitcoin #8 + Dragon #12 sudah kartu feature
++   di HEAD — bukan pengganti baru (dicatat di build-log.md).
+   DATE CHECK kini menulis event terjadwal di "Not shown" (bukan
++   "Not yet happened" sebagai feature) + alasan jujur.
+
 YANG TIDAK BERUBAH: kerangka masthead + deck + strip + 3 hero + 10 kartu
 + peta + brief + DATE CHECK; kemurnian tanggal 35/35 Sabtu + angka
-terverifikasi (3 / $56.814 / 2-42 / BepiColombo "tonight"); lead trio
-COP31 / Riyadh / Peru; DATE CHECK jujur + menonjol; teknis <=1 MiB,
+terverifikasi (3 / $56.814 / 2-42); lead trio COP31 / Riyadh / Peru; DATE CHECK jujur + menonjol; teknis <=1 MiB,
 1024x1024, deterministik 2x, tanpa network; satu gaya ilustrasi datar;
 subjek utuh + margin; warna atas panel beda dari tetangga; footer tanpa
 catatan produksi.
@@ -216,21 +234,21 @@ HEROES = [
      "sum": ("Draft 2 drops fossil fuels; talks resume Saturday "
              "morning in Antalya."),
      "painter": "cop31", "map_city": "Antalya",
-     "banner": "COP31: OVERTIME", "source": "AP · Reuters"},
+     "banner": "COP31: OVERTIME", "source": "AP · Reuters · REPORTED"},
     {"num": 2, "city": "Riyadh", "place": "RIYADH, SAUDI ARABIA",
      "topic": "MISSILES", "region": "MIDDLE EAST",
      "title": "Houthi missiles shot down over Riyadh",
      "sum": ("Third night of alerts; two blasts heard, no damage "
              "or casualties reported."),
      "painter": "riyadh", "map_city": "Riyadh",
-     "banner": "3 MISSILES DOWN", "source": "Reuters"},
+     "banner": "3 MISSILES DOWN", "source": "Reuters · OFFICIAL"},
     {"num": 3, "city": "Junin", "place": "JUNIN, PERU",
      "topic": "QUAKE", "region": "AMERICAS",
      "title": "Strong quake hits Peru",
      "sum": ("Epicentre near Junin, 108 km deep; felt in Lima, "
              "no deaths, no tsunami threat."),
      "painter": "quake", "map_city": "Junin",
-     "banner": "PERU: QUAKE 6.7", "source": "AFP · AP"},
+     "banner": "PERU: QUAKE 6.7", "source": "AFP · AP · CONFIRMED"},
 ]
 
 CARDS = [
@@ -239,61 +257,61 @@ CARDS = [
      "title": "Kryvyi Rih double strike",
      "sum": "Double-tap on restaurant; 27 seriously hurt.",
      "painter": "kryvyi", "map_city": "Kryvyi Rih",
-     "banner": "2 DEAD · 42 HURT", "source": "BBC · Kyiv Indep."},
+     "banner": "2 DEAD · 42 HURT", "source": "Kyiv Indep. · REPORTED"},
     {"num": 5, "city": "Davao", "place": "DAVAO, PHILIPPINES",
      "topic": "AIR SAFETY", "region": "ASIA",
      "title": "Air Niugini jet lands in Davao",
      "sum": "Engine fire warning; all safe.",
      "painter": "davao", "map_city": "Davao",
-     "banner": "ALL 146 SAFE", "source": "AP"},
-    {"num": 6, "city": "Darmstadt", "place": "DARMSTADT, GERMANY",
-     "topic": "SPACE", "region": "GLOBAL",
-     "title": "BepiColombo arrives at Mercury",
-     "sum": "Orbit burn due 19:24 CET tonight; 8-year trip ends.",
-     "painter": "bepi", "map_city": "Darmstadt",
-     "banner": "TONIGHT 19:24", "source": "ESA"},
+     "banner": "ALL 146 SAFE", "source": "AP · CONFIRMED"},
+    {"num": 6, "city": "Sinaloa", "place": "SINALOA, MEXICO",
+     "topic": "CAPTURE", "region": "AMERICAS",
+     "title": "Mexico captures 'El Chapo Isidro'",
+     "sum": "FBI's most wanted; held in Sinaloa raid.",
+     "painter": "capture", "map_city": "Sinaloa",
+     "banner": "DRUG LORD HELD", "source": "Reuters · OFFICIAL"},
     {"num": 7, "city": "Washington", "place": "WASHINGTON, USA",
      "topic": "TAX", "region": "AMERICAS",
      "title": "Trump vows tax on data centres",
      "sum": "US firms taxed if they build abroad.",
      "painter": "capitol", "map_city": "Washington",
-     "banner": "TREMENDOUS TAX", "source": "Reuters"},
+     "banner": "AI TAX PLAN", "source": "Reuters · REPORTED"},
     {"num": 8, "city": "New York", "place": "GLOBAL MARKETS",
      "topic": "MARKETS", "region": "GLOBAL",
      "title": "Bitcoin slides early Saturday",
      "sum": "Down 3.6%; $1.5bn liquidated.",
      "painter": "bitcoin", "map_city": "New York",
-     "banner": "BITCOIN $56,814", "source": "Reuters"},
+     "banner": "BITCOIN $56,814", "source": "Reuters · CONFIRMED"},
     {"num": 9, "city": "Wellington", "place": "WELLINGTON, NZ",
      "topic": "CRICKET", "region": "OCEANIA",
      "title": "Rahul's century in Wellington",
      "sum": "Century No. 13; out 136, India 344/2 at tea.",
      "painter": "cricket", "map_city": "Wellington",
-     "banner": "RAHUL 136", "source": "Reuters"},
+     "banner": "RAHUL 136", "source": "Reuters · CONFIRMED"},
     {"num": 10, "city": "Las Vegas", "place": "LAS VEGAS, USA",
      "topic": "FORMULA 1", "region": "AMERICAS",
      "title": "Las Vegas GP qualifying",
      "sum": "Antonelli fastest; Verstappen on pole.",
      "painter": "f1", "map_city": "Las Vegas",
-     "banner": "ON POLE", "source": "Reuters · Sky"},
+     "banner": "ON POLE", "source": "Reuters · CONFIRMED"},
     {"num": 11, "city": "Hormuz", "place": "STRAIT OF HORMUZ",
      "topic": "DRONE", "region": "MIDDLE EAST",
      "title": "Iran says it downed MQ-9",
      "sum": "58th downing claimed; unverified.",
      "painter": "drone", "map_city": "Hormuz",
-     "banner": "MQ-9 DOWN", "source": "Press TV"},
+     "banner": "IRAN: MQ-9 DOWN", "source": "Press TV · CLAIM"},
     {"num": 12, "city": "California", "place": "OFF CALIFORNIA, USA",
      "topic": "SPACE", "region": "AMERICAS",
      "title": "SpaceX Dragon splashdown",
-     "sum": "Undocks from ISS; splashdown 16:55 EST.",
+     "sum": "Splashed down off LA at 2:03 p.m. PST.",
      "painter": "dragon", "map_city": "California Coast",
-     "banner": "SPLASHDOWN", "source": "NASA"},
-    {"num": 13, "city": "Turin", "place": "TURIN, ITALY",
-     "topic": "TENNIS", "region": "EUROPE",
-     "title": "ATP Finals semis in Turin",
-     "sum": "Alcaraz–Shelton, Zverev–Medvedev.",
-     "painter": "tennis", "map_city": "Turin",
-     "banner": "SEMIS TONIGHT", "source": "ATP Tour"},
+     "banner": "SPLASHDOWN", "source": "NASA · OFFICIAL"},
+    {"num": 13, "city": "Gulf of Finland", "place": "GULF OF FINLAND",
+     "topic": "SHIPPING", "region": "EUROPE",
+     "title": "Russian cargo ship hit by drones",
+     "sum": "Bound for Kaliningrad; on fire off Finland.",
+     "painter": "ship", "map_city": "Gulf of Finland",
+     "banner": "DRONES HIT SHIP", "source": "Reuters · REPORTED"},
 ]
 
 # Briefs 14-35: (nomor, kota, teks 1 baris + fakta/angka kunci, sumber,
@@ -312,7 +330,7 @@ BRIEFS = [
     (23, "MANILA", "Pet cremation scam: 170 dumped", "BBC", "ASIA"),
     (24, "JAKARTA", "PLN signs clean-power deals", "Antara", "ASIA"),
     (25, "NEW DELHI", "Pakistani minister speaks", "The News", "ASIA"),
-    (26, "E. INDIA", "Akvan rain soaks east India", "Jagran", "ASIA"),
+    (26, "GAZA", "Strike kills 3 in aid vehicle", "Reuters", "MIDDLE EAST"),
     (27, "AUSTRALIA", "Cummins keeps the captaincy", "AAP", "OCEANIA"),
     (28, "ITALY", "Rail strike halts trains today", "Treniamo", "EUROPE"),
     (29, "NAGA", "Naga votes on city status", "PNA", "ASIA"),
@@ -321,7 +339,7 @@ BRIEFS = [
     (32, "DELHI", "Delhi chokes: AQI 279", "CPCB", "ASIA"),
     (33, "VISAYAS", "Grid on yellow alert", "NGCP", "ASIA"),
     (34, "TASMANIA", "One Nation donors revealed", "ABC", "OCEANIA"),
-    (35, "MELBOURNE", "T20 opener tonight", "cricket.com.au", "OCEANIA"),
+    (35, "BRASILIA", "Bolsonaro taken to ICU", "Reuters", "AMERICAS"),
 ]
 
 NUMBERS = [("13", "DAY 13 \u00b7 COP31"), ("3", "MISSILES DOWNED"),
@@ -330,11 +348,12 @@ NUMBERS = [("13", "DAY 13 \u00b7 COP31"), ("3", "MISSILES DOWNED"),
 
 # Bar region: hitungan dari 35 cerita KAMI (bukan angka rank 2 yang
 # dikutip loss report — angka itu total 32 = cerita rank 2).
-# Asia 12, Americas 6, Europe 5, Middle East 4, Oceania 4, Global 3,
-# Africa 1 — lihat stories-21nov.md.
-REGION_BAR = [("EUROPE", 5), ("MIDDLE EAST", 4), ("AFRICA", 1),
-              ("ASIA", 12), ("AMERICAS", 6), ("OCEANIA", 4),
-              ("WORLD", 3)]
+# Europe 5, Middle East 5, Africa 1, Asia 11, Americas 8, Oceania 3,
+# Global 2 — improve PUTARAN 1 (El Chapo + kapal Rusia + Bolsonaro +
+# Gaza masuk; BepiColombo + ATP + T20 + Akvan keluar).
+REGION_BAR = [("EUROPE", 5), ("MIDDLE EAST", 5), ("AFRICA", 1),
+              ("ASIA", 11), ("AMERICAS", 8), ("OCEANIA", 3),
+              ("WORLD", 2)]
 
 # Warna region: dipakai banner + segmen bar region + pin peta (satu
 # sistem). Semua cukup gelap untuk teks putih >= 3,0:1 (dicek di build).
@@ -369,16 +388,17 @@ DATECHECK_LIST = ("Left out as Friday 20 Nov news: Kyiv bridges hit \u00b7 "
                   "deal \u00b7 Akvan landfall \u00b7 ICJ Myanmar ruling \u00b7 "
                   "Iran uranium \u00b7 Taiwan warning \u00b7 Shenzhen summit \u00b7 "
                   "Anthropic IPO \u00b7 GTA VI launch. "
-                  "Not yet happened: BepiColombo (19:24 CET) \u00b7 ATP semis "
-                  "\u00b7 T20 opener.")
+                  "Not shown: BepiColombo \u00b7 ATP semis \u00b7 T20 opener "
+                  "\u2014 scheduled, not yet happened when drawn.")
 
 DC_BRIEF_LINES = ("Every story here happened, or was first reported, on "
                   "Saturday 21 Nov 2026.",
-                  "Friday\u2019s news was left out; tonight\u2019s events "
-                  "have not happened yet.")
+                  "HOW WE CHECKED: CONFIRMED = primary source \u00b7 OFFICIAL "
+                  "= official statement \u00b7 REPORTED = wire report \u00b7 "
+                  "CLAIM = unverified.")
 
 SOURCES = ("Sources: Reuters \u00b7 AP \u00b7 AFP \u00b7 BBC \u00b7 USGS \u00b7 "
-           "NASA \u00b7 Antara \u00b7 Yonhap \u00b7 ATP Tour \u00b7 ESA \u00b7 "
+           "NASA \u00b7 Antara \u00b7 Yonhap \u00b7 "
            "Kyiv Independent \u00b7 NGCP \u00b7 BMKG")
 
 # ------------------------------------------------------------------ peta
@@ -422,19 +442,20 @@ def load_land_polys():
 
 LAND_POLYS = load_land_polys()
 
-# lon/lat pin 1-13 (lead + feature). #6 BepiColombo: ESOC Darmstadt
-# (pusat kendali misi ESA) — tidak ada lokasi Bumi untuk Merkurius.
+# lon/lat pin 1-13 (lead + feature). #6 penangkapan El Chapo:
+# Sinaloa (negara bagian tempat operasi militer Jumat malam).
 # #8 Bitcoin: proxy New York (pasar AS; Nasdaq -5,3% Jumat) — Bitcoin
 # sendiri global, tidak punya lokasi; dicatat di improve_2026-11-21.md.
 # #12 Dragon: zona splashdown lepas pantai California.
+# #13 kapal kargo: Teluk Finlandia (lokasi serangan drone).
 PLACES = {
     "Antalya": (30.7, 36.9), "Riyadh": (46.7, 24.7),
     "Junin": (-75.9, -10.9), "Kryvyi Rih": (33.4, 47.9),
-    "Davao": (125.6, 7.1), "Darmstadt": (8.65, 49.87),
+    "Davao": (125.6, 7.1), "Sinaloa": (-107.4, 24.8),
     "Washington": (-77.0, 38.9), "New York": (-74.0, 40.7),
     "Wellington": (174.8, -41.3), "Las Vegas": (-115.1, 36.2),
     "Hormuz": (56.5, 27.0), "California Coast": (-122.0, 34.0),
-    "Turin": (7.7, 45.1),
+    "Gulf of Finland": (25.0, 60.0),
 }
 
 # ------------------------------------------------------------------ painters
@@ -603,24 +624,26 @@ def p_davao(w, h, bg):
     return im
 
 
-def p_bepi(w, h, bg):
-    """Kartu 6: wahana BepiColombo + Merkurius."""
+def p_capture(w, h, bg):
+    """Kartu 6 (BARU, improve PUTARAN 1): lencana polisi emas besar.
+    (Fakta: militer Meksiko menangkap "El Chapo Isidro" di Sinaloa;
+    FBI top 10 most wanted.) Revisi: borgol (dua cincin) DIHAPUS —
+    penalaran juri di duel pair5_ba (terpotong, tidak bernilai) sempat
+    membacanya sebagai "meth lab"; lencana besar saja yang tinggal,
+    supaya ilustrasinya tidak ambigu."""
     im = Image.new("RGB", (w, h), bg)
     d = ImageDraw.Draw(im)
-    for (sx, sy) in [(14, 6), (52, 10), (120, 5), (168, 8)]:
-        d.ellipse([sx, sy, sx + 2, sy + 2], fill=WHITE)
-    mx, my, mr = int(w * 0.72), int(h * 0.52), 15
-    d.ellipse([mx - mr, my - mr, mx + mr, my + mr], fill=(150, 140, 130),
-              outline=NAVY, width=1)
-    d.ellipse([mx - 8, my - 5, mx - 2, my + 1], fill=(110, 100, 90))
-    d.ellipse([mx + 2, my + 4, mx + 7, my + 9], fill=(110, 100, 90))
-    cx, cy = int(w * 0.30), int(h * 0.50)
-    d.rectangle([cx - 12, cy - 9, cx + 12, cy + 9], fill=GOLD_M,
-                outline=NAVY, width=1)
-    d.rectangle([cx - 34, cy - 5, cx - 12, cy + 5], fill=NAVY)
-    d.rectangle([cx + 12, cy - 5, cx + 34, cy + 5], fill=NAVY)
-    d.line([(cx + 34, cy), (mx - mr - 2, my)], fill=GOLD_M, width=2)
-    d.ellipse([cx - 2, cy - 2, cx + 2, cy + 2], fill=RED_M)
+    # lencana besar di tengah: perisai emas + bintang navy + titik putih
+    cx, cy = w // 2, int(h * 0.50)
+    d.polygon([(cx, cy - 20), (cx + 18, cy - 13), (cx + 16, cy + 7),
+               (cx, cy + 20), (cx - 16, cy + 7), (cx - 18, cy - 13)],
+              fill=GOLD_M, outline=NAVY, width=2)
+    d.ellipse([cx - 7, cy - 7, cx + 7, cy + 7], fill=NAVY)
+    d.ellipse([cx - 2, cy - 2, cx + 2, cy + 2], fill=WHITE)
+    # pita kecil di bawah lencana
+    d.polygon([(cx - 12, cy + 20), (cx + 12, cy + 20),
+               (cx + 8, cy + 26), (cx - 8, cy + 26)],
+              fill=NAVY)
     return im
 
 
@@ -767,29 +790,46 @@ def p_dragon(w, h, bg):
     return im
 
 
-def p_tennis(w, h, bg):
-    """Kartu 13: bola tenis besar + garis lapangan."""
+def p_ship(w, h, bg):
+    """Kartu 13 (BARU, improve PUTARAN 1): kapal kargo + asap + ombak.
+    (Fakta: kapal tujuan Kaliningrad diserang 2 drone, terbakar,
+    hanyut ke perairan Finlandia.)"""
     im = Image.new("RGB", (w, h), bg)
     d = ImageDraw.Draw(im)
-    gy = int(h * 0.84)
-    d.rectangle([0, gy, w, h], fill=(60, 110, 70))
-    d.line([(0, int(h * 0.60)), (w, int(h * 0.60))], fill=WHITE, width=2)
-    cx, cy, r = int(w * 0.42), int(h * 0.50), 12
-    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=(200, 220, 60),
-              outline=NAVY, width=1)
-    d.arc([cx - r, cy - r, cx + r, cy + r], 200, 340, fill=WHITE, width=2)
-    d.arc([cx - r, cy - r, cx + r, cy + r], 20, 160, fill=WHITE, width=2)
-    d.rectangle([int(w * 0.72), int(h * 0.30), int(w * 0.72) + 26,
-                 int(h * 0.30) + 18], fill=WHITE, outline=NAVY, width=1)
-    d.line([(int(w * 0.72), int(h * 0.30) + 9),
-            (int(w * 0.72) + 26, int(h * 0.30) + 9)], fill=NAVY, width=1)
+    gy = int(h * 0.68)
+    d.rectangle([0, gy, w, h], fill=(46, 110, 142))
+    for x in range(0, w, 22):
+        d.arc([x, gy + 2, x + 22, gy + 12], 0, 180, fill=WHITE, width=2)
+    # asap kelabu di atas kontainer tengah
+    for (sx, sy, sr) in [(int(w * 0.52), int(h * 0.16), 7),
+                         (int(w * 0.58), int(h * 0.08), 6),
+                         (int(w * 0.46), int(h * 0.10), 5)]:
+        d.ellipse([sx - sr, sy - sr, sx + sr, sy + sr],
+                  fill=(150, 150, 145))
+    # kontainer warna-warni di atas geladak
+    d.rectangle([int(w * 0.16), int(h * 0.34), int(w * 0.34), gy - 6],
+                fill=RED_M, outline=NAVY, width=1)
+    d.rectangle([int(w * 0.36), int(h * 0.28), int(w * 0.54), gy - 6],
+                fill=GOLD_M, outline=NAVY, width=1)
+    d.rectangle([int(w * 0.56), int(h * 0.36), int(w * 0.68), gy - 6],
+                fill=NAVY, outline=WHITE, width=1)
+    # menara anjungan putih di kanan
+    d.rectangle([int(w * 0.72), int(h * 0.22), int(w * 0.82), gy - 6],
+                fill=WHITE, outline=NAVY, width=1)
+    for wy in range(int(h * 0.28), gy - 10, 8):
+        d.rectangle([int(w * 0.74), wy, int(w * 0.80), wy + 4], fill=NAVY)
+    # lambung gelap
+    d.polygon([(int(w * 0.08), gy - 6), (int(w * 0.92), gy - 6),
+               (int(w * 0.86), gy + 6), (int(w * 0.14), gy + 6)],
+              fill=(60, 60, 60), outline=NAVY, width=1)
     return im
 
 
-CARD_PAINTERS = {"kryvyi": p_kryvyi, "davao": p_davao, "bepi": p_bepi,
+CARD_PAINTERS = {"kryvyi": p_kryvyi, "davao": p_davao,
+                 "capture": p_capture,
                  "capitol": p_capitol, "bitcoin": p_bitcoin,
                  "cricket": p_cricket, "f1": p_f1, "drone": p_drone,
-                 "dragon": p_dragon, "tennis": p_tennis}
+                 "dragon": p_dragon, "ship": p_ship}
 HERO_PAINTERS = {"cop31": p_cop31, "riyadh": p_riyadh, "quake": p_quake}
 
 
